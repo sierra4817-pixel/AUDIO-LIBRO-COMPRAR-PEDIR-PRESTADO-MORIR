@@ -1,0 +1,35 @@
+# Ignore large files
+*.zip
+*.zip.*
+*.rar
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.HEIC
+*.heic
+*.iso
+*.pptx
+*.PPTX
+
+# Ignore temporary browser profiles
+temp_profile/
+temp_profile*
+
+# Ignore python caches and local setups
+__pycache__/
+*.pyc
+.env
+.env.local
+.gemini/
+.system_generated/
+scratch/
+check_voices.py
+check_eleven.py
+test_eleven_gen.py
+search_logs.py
+search_text.py
+search_pdf.py
+
+# Keep audio track outputs and book maquetado files
+# (Note: audiolibro/ folder and app_curso/ are included)
