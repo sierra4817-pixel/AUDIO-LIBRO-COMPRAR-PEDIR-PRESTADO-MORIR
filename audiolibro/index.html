@@ -1,1027 +1,165 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Comprar, Pedir Prestado, Morir - Curso</title>
-    <!-- iOS meta tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="CPM Curso">
-    <link rel="apple-touch-icon" href="icon.png">
-    
-    <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0B0E14;
-            --card-bg: #151B26;
-            --text-primary: #F1F5F9;
-            --text-secondary: #94A3B8;
-            --accent-gold: #D4AF37;
-            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --accent-green: #10B981;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --safe-top: env(safe-area-inset-top, 20px);
-            --safe-bottom: env(safe-area-inset-bottom, 20px);
-        }
-        
-        body.cream-mode {
-            --bg-color: #FAF9F6;
-            --card-bg: #F1EFE9;
-            --text-primary: #1E293B;
-            --text-secondary: #64748B;
-            --accent-gold: #B38F24;
-            --gold-gradient: linear-gradient(135deg, #A57E25 0%, #E6C575 25%, #8C6615 50%, #FAF1B4 75%, #7C5807 100%);
-            --accent-green: #059669;
-            --border-color: rgba(0, 0, 0, 0.08);
-        }
+/*==================================================
+  CSS PREMIUM: ESTILO CINEMATOGRÁFICO Y CRISTAL
+  Basado en la estética de 'CÓDIGO ALFA VIP'
+==================================================*/
 
-        body.light-mode {
-            --bg-color: #FFFFFF;
-            --card-bg: #F8FAFC;
-            --text-primary: #0F172A;
-            --text-secondary: #475569;
-            --accent-gold: #A17B1B;
-            --gold-gradient: linear-gradient(135deg, #A57E25 0%, #D8B251 25%, #8C6615 50%, #F2E49B 75%, #7C5807 100%);
-            --accent-green: #15803D;
-            --border-color: rgba(0, 0, 0, 0.06);
-        }
+/* Paleta de colores y variables globales optimizadas */
+:root {
+  --bg-main: #060913; /* Negro azulado profundo */
+  --bg-radial: radial-gradient(circle at 50% 30%, #111827 0%, #060913 70%);
+  --bg-card: rgba(15, 22, 42, 0.65); /* Fondo tarjeta esmerilado */
+  
+  --gold-primary: #ffd700; /* Oro puro para acentos */
+  --gold-text: linear-gradient(135deg, #FFD700 0%, #C8A050 50%, #B8860B 100%); /* Degradado oro pulido */
+  --gold-glow: rgba(229, 193, 88, 0.15); /* Resplandor dorado sutil */
+  
+  --text-primary: #F8FAFC; /* Blanco roto premium */
+  --text-muted: #94A3B8; /* Gris azulado para descripciones */
+  
+  /* Fuentes basadas en la referencia */
+  --font-serif: 'Lora', Georgia, serif; /* Para descripciones con elegancia */
+  --font-sans: 'Montserrat', sans-serif; /* Para títulos y botones */
+}
 
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
+/* 1. Fondo de la Aplicación: Degradado Radial sutil para simular luz de fondo */
+body {
+  background: var(--bg-radial);
+  background-color: var(--bg-main);
+  margin: 0;
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            transition: background-color 0.3s, color 0.3s;
-        }
+/* Contenedor principal para centrar la tarjeta */
+#app-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
 
-        #app-container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-            position: relative;
-            padding-top: var(--safe-top);
-            padding-bottom: calc(var(--safe-bottom) + 60px);
-        }
+/* 2. Tarjeta del Curso: Efecto Cristal (Glassmorphism) Profundo y Premium */
+.tarjeta-curso {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px); /* Desenfoque esmerilado */
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* Borde fino y sutil que imita el borde del cristal */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  
+  padding: 40px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  
+  /* Sombras para dar profundidad y resplandor interno */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
 
-        #header {
-            height: 48px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 16px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+/* Efecto hover sutil: aumenta el resplandor dorado */
+.tarjeta-curso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
+              0 0 20px var(--gold-glow);
+  border-color: rgba(229, 193, 88, 0.3); /* Oro sutil */
+}
 
-        #header-title {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* 3. Título Principal: Oro Pulido y Estilizado (Montserrat Light/Elegante) */
+.titulo-curso {
+  font-family: var(--font-sans);
+  font-size: 2.2rem;
+  font-weight: 300; /* Delgado como en el diseño premium */
+  letter-spacing: 0.15em; /* Espaciado elegante */
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  
+  /* Degradado de Oro en el texto */
+  background: var(--gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Resplandor suave para que "brille" contra el fondo oscuro */
+  text-shadow: 0 2px 20px rgba(229, 193, 88, 0.2);
+}
 
-        #content-area {
-            flex-grow: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 16px;
-        }
+/* 4. Subtítulo: Legibilidad Premium con contraste sutil */
+.subtitulo-curso {
+  font-family: var(--font-serif); /* Usamos serif aquí para el contraste de elegancia */
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  opacity: 0.9;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
 
-        /* Views */
-        .view-panel {
-            display: none;
-        }
-        
-        .view-panel.active {
-            display: block;
-        }
+/* Icono central iluminado */
+.icono-contenedor {
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle, rgba(229, 193, 88, 0.15) 0%, rgba(0,0,0,0) 70%);
+  border: 1px solid rgba(229, 193, 88, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 0 15px rgba(229, 193, 88, 0.1);
+}
 
-        /* Bottom Nav */
-        #nav-bar {
-            position: absolute;
-            bottom: var(--safe-bottom);
-            left: 0;
-            right: 0;
-            height: 60px;
-            border-top: 1px solid var(--border-color);
-            background: rgba(21, 27, 38, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        body.cream-mode #nav-bar {
-            background: rgba(241, 239, 233, 0.85);
-        }
-        body.light-mode #nav-bar {
-            background: rgba(248, 250, 252, 0.85);
-        }
+/* 5. Título Interno de la tarjeta: Montserrat Bold con espaciado */
+.tarjeta-titulo {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
 
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.7rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            opacity: 0.7;
-        }
+/* 6. Texto Descriptivo: Lora (serif) para legibilidad elegante y alineación justificada */
+.tarjeta-descripcion {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  text-align: justify; /* Como en la referencia de texto */
+  text-justify: inter-word;
+}
 
-        .nav-item.active {
-            color: var(--accent-gold);
-            opacity: 1;
-        }
+/* Botón de acción principal: Montserrat Bold, Oro Pulido, Efecto Retroiluminado */
+.btn-entrar {
+  font-family: var(--font-sans);
+  background: transparent;
+  border: 1px solid var(--gold-primary); /* Borde oro nítido */
+  color: var(--gold-primary);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  
+  /* Transición suave para todos los efectos */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 0 transparent;
+}
 
-        .nav-icon {
-            font-size: 1.3rem;
-            margin-bottom: 3px;
-        }
-
-        /* Dashboard View */
-        .progress-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .progress-circle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: conic-gradient(var(--accent-gold) calc(var(--p-val) * 1%), var(--border-color) 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .progress-circle::after {
-            content: attr(data-progress);
-            position: absolute;
-            width: 58px;
-            height: 58px;
-            background-color: var(--card-bg);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.95rem;
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .progress-info h2 {
-            margin: 0 0 5px 0;
-            font-size: 1.1rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .progress-info p {
-            margin: 0;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-indent: 0;
-        }
-
-        .lesson-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .lesson-row {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 14px 16px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .lesson-row-info h3 {
-            margin: 0 0 4px 0;
-            font-size: 0.9rem;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary);
-        }
-
-        .lesson-row-info p {
-            margin: 0;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            text-indent: 0;
-        }
-
-        /* Chapters List inside Lesson */
-        .chapter-container {
-            display: none;
-            padding: 5px 10px 15px 10px;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .chapter-container.active {
-            display: flex;
-        }
-
-        .chapter-item {
-            background-color: rgba(255, 255, 255, 0.02);
-            border-radius: 6px;
-            padding: 10px 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid var(--border-color);
-            font-size: 0.82rem;
-            cursor: pointer;
-        }
-
-        body.cream-mode .chapter-item {
-            background-color: rgba(0, 0, 0, 0.02);
-        }
-
-        .chapter-checkbox {
-            width: 18px;
-            height: 18px;
-            border-radius: 4px;
-            border: 1.5px solid var(--accent-gold);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .chapter-checkbox.checked::after {
-            content: "✓";
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-        }
-
-        /* Reader View */
-        #reader-settings {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-
-        .setting-btn {
-            background: none;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        #reader-text {
-            font-family: 'Lora', Georgia, serif;
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-top: 15px;
-            transition: font-size 0.2s;
-        }
-
-        #reader-text p {
-            margin: 0 0 0.8em 0;
-            text-align: justify;
-            text-indent: 1.5em;
-        }
-
-        #reader-text p.no-indent {
-            text-indent: 0 !important;
-        }
-
-        #reader-text h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem;
-            text-align: center;
-            margin-top: 1.5em;
-            color: var(--accent-gold);
-        }
-        
-        #reader-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            margin-top: 1.4em;
-            border-left: 2px solid var(--accent-gold);
-            padding-left: 8px;
-        }
-
-        blockquote.callout {
-            background-color: rgba(255, 255, 255, 0.03);
-            border-left: 3px solid var(--accent-gold);
-            padding: 10px 14px;
-            margin: 15px 0;
-            font-family: monospace;
-            font-size: 0.85rem;
-            border-radius: 0 4px 4px 0;
-        }
-
-        body.cream-mode blockquote.callout {
-            background-color: rgba(0, 0, 0, 0.03);
-        }
-
-        blockquote.callout p {
-            margin: 0 0 4px 0;
-            text-indent: 0 !important;
-            text-align: left;
-        }
-
-        #audio-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            padding: 10px 14px;
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .audio-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .play-btn {
-            background: var(--gold-gradient);
-            border: none;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            color: #000;
-            font-size: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
-        }
-
-        .audio-slider {
-            flex-grow: 1;
-            height: 4px;
-            background-color: var(--border-color);
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .audio-progress {
-            height: 100%;
-            background: var(--gold-gradient);
-            width: 0%;
-            border-radius: 2px;
-        }
-
-        .audio-time {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            font-family: monospace;
-        }
-
-        /* Simulador View */
-        .sim-group {
-            margin-bottom: 14px;
-        }
-
-        .sim-label {
-            display: block;
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-        }
-
-        .sim-input {
-            width: 100%;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-family: monospace;
-        }
-
-        .sim-output-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            padding: 16px;
-            margin-top: 20px;
-        }
-
-        .sim-output-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 0.88rem;
-        }
-        
-        .sim-output-row:last-child {
-            margin-bottom: 0;
-            border-top: 1px solid var(--border-color);
-            padding-top: 8px;
-            font-weight: 700;
-        }
-
-        .status-badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .status-safe {
-            background-color: rgba(16, 185, 129, 0.15);
-            color: var(--accent-green);
-        }
-
-        .status-risk {
-            background-color: rgba(239, 68, 68, 0.15);
-            color: #EF4444;
-        }
-
-        .mark-done-btn {
-            display: block;
-            width: 100%;
-            background: var(--gold-gradient);
-            color: #000;
-            border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-top: 25px;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(184, 134, 11, 0.2);
-        }
-    </style>
-</head>
-<body>
-    <div id="app-container">
-        <div id="header">
-            <span id="header-title">CPM Curso</span>
-            <span style="font-size:0.75rem; color:var(--text-secondary);" id="header-chapter">Dashboard</span>
-        </div>
-        
-        <div id="content-area">
-            <!-- 1. DASHBOARD VIEW -->
-            <div id="view-dashboard" class="view-panel active">
-                <div class="progress-card">
-                    <div class="progress-circle" id="dashboard-circle" style="--p-val: 0;" data-progress="0%"></div>
-                    <div class="progress-info">
-                        <h2>Tu Progreso</h2>
-                        <p id="dashboard-text">Lecciones: 0 de 11 completadas</p>
-                    </div>
-                </div>
-                
-                <div class="lesson-list" id="dashboard-lessons">
-                    <!-- Lessons generated programmatically -->
-                </div>
-            </div>
-            
-            <!-- 2. READER VIEW -->
-            <div id="view-reader" class="view-panel">
-                <div id="audio-card">
-                    <div class="audio-controls">
-                        <button class="play-btn" id="audio-play-btn">▶</button>
-                        <div class="audio-slider" id="audio-slider-bg">
-                            <div class="audio-progress" id="audio-progress-bar"></div>
-                        </div>
-                        <span class="audio-time" id="audio-time-label">0:00</span>
-                    </div>
-                    <audio id="audio-player"></audio>
-                </div>
-                
-                <div id="reader-settings">
-                    <div>
-                        <button class="setting-btn" onclick="adjustFont(-1)">A-</button>
-                        <button class="setting-btn" onclick="adjustFont(1)">A+</button>
-                    </div>
-                    <div>
-                        <button class="setting-btn" onclick="setTheme('dark')">Oscuro</button>
-                        <button class="setting-btn" onclick="setTheme('cream')">Crema</button>
-                        <button class="setting-btn" onclick="setTheme('light')">Claro</button>
-                    </div>
-                </div>
-                
-                <div id="reader-text">
-                    Selecciona una lección para comenzar a leer.
-                </div>
-                
-                <div style="display: flex; gap: 12px; margin-top: 25px; width: 100%;">
-                    <button class="mark-done-btn" id="reader-done-btn" onclick="markCurrentChapterRead()" style="flex: 1; margin-top: 0; transition: all 0.2s;">
-                        Marcar Leído
-                    </button>
-                    <button class="mark-done-btn" id="reader-continue-btn" onclick="clickContinue()" style="flex: 1.5; margin-top: 0; background: var(--gold-gradient); color: #000; transition: all 0.2s;">
-                        Continuar
-                    </button>
-                </div>
-            </div>
-            
-            <!-- 3. SIMULADOR VIEW -->
-            <div id="view-simulador" class="view-panel">
-                <div class="sim-group">
-                    <label class="sim-label">Valor de Cartera (€)</label>
-                    <input type="number" class="sim-input" id="sim-portfolio" value="12000000" oninput="runSimulation()">
-                </div>
-                <div class="sim-group">
-                    <label class="sim-label">Préstamo Solicitado (€)</label>
-                    <input type="number" class="sim-input" id="sim-loan" value="4000000" oninput="runSimulation()">
-                </div>
-                <div class="sim-group">
-                    <label class="sim-label">Tasa de Interés (%)</label>
-                    <input type="number" class="sim-input" id="sim-rate" value="2.8" step="0.1" oninput="runSimulation()">
-                </div>
-                <div class="sim-group">
-                    <label class="sim-label">Crecimiento Anual Estimado de Cartera (%)</label>
-                    <input type="number" class="sim-input" id="sim-growth" value="7.0" step="0.1" oninput="runSimulation()">
-                </div>
-                <div class="sim-group">
-                    <label class="sim-label">Simular Caída del Mercado (%)</label>
-                    <input type="range" class="sim-input" id="sim-drop" min="0" max="60" value="0" oninput="runSimulation()">
-                    <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">
-                        <span>0%</span>
-                        <span id="sim-drop-val" style="font-weight:bold; color:var(--accent-gold);">0% de caída</span>
-                        <span>60%</span>
-                    </div>
-                </div>
-                
-                <div class="sim-output-card">
-                    <div class="sim-output-row">
-                        <span>LTV Inicial / LTV Ajustado</span>
-                        <span id="out-ltv" style="font-family:monospace; font-weight:bold;">33.3% / 33.3%</span>
-                    </div>
-                    <div class="sim-output-row">
-                        <span>Intereses Anuales del Préstamo</span>
-                        <span id="out-interest" style="font-family:monospace;">-112.000 €</span>
-                    </div>
-                    <div class="sim-output-row">
-                        <span>Crecimiento de la Cartera (Año 1)</span>
-                        <span id="out-portfolio-growth" style="font-family:monospace;">+840.000 €</span>
-                    </div>
-                    <div class="sim-output-row">
-                        <span>Ganancia Neta (Diferencial)</span>
-                        <span id="out-net" style="font-family:monospace; font-weight:bold; color:var(--accent-green);">+728.000 €</span>
-                    </div>
-                    <div class="sim-output-row">
-                        <span>Estado de Seguridad (Margin Call a 85% LTV)</span>
-                        <span id="out-status" class="status-badge status-safe">Zona Segura</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="nav-bar">
-            <div class="nav-item active" id="btn-nav-dashboard" onclick="switchView('dashboard')">
-                <span class="nav-icon">📋</span>
-                <span>Curso</span>
-            </div>
-            <div class="nav-item" id="btn-nav-reader" onclick="switchView('reader')">
-                <span class="nav-icon">📖</span>
-                <span>Lector</span>
-            </div>
-            <div class="nav-item" id="btn-nav-simulador" onclick="switchView('simulador')">
-                <span class="nav-icon">📊</span>
-                <span>Simulador</span>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Load book data -->
-    <script src="book_data.js"></script>
-    <script>
-        let currentSecIdx = 0;
-        let currentChapIdx = 0;
-        let currentFontSize = 16;
-        
-        // Progress State from LocalStorage
-        let readChapters = JSON.parse(localStorage.getItem('cpm_read_chapters') || '{}');
-        
-        // Audio Player State
-        const audio = document.getElementById('audio-player');
-        const playBtn = document.getElementById('audio-play-btn');
-        const progressBar = document.getElementById('audio-progress-bar');
-        const timeLabel = document.getElementById('audio-time-label');
-        const sliderBg = document.getElementById('audio-slider-bg');
-        
-        // Initialize App
-        function initApp() {
-            renderLessonsList();
-            updateProgress();
-            runSimulation();
-            
-            // Audio setup
-            playBtn.addEventListener('click', toggleAudio);
-            audio.addEventListener('timeupdate', updateAudioProgress);
-            sliderBg.addEventListener('click', seekAudio);
-            
-            // Restore theme
-            const savedTheme = localStorage.getItem('cpm_theme') || 'dark';
-            setTheme(savedTheme);
-        }
-        
-        function setTheme(theme) {
-            document.body.className = '';
-            if (theme !== 'dark') {
-                document.body.classList.add(theme + '-mode');
-            }
-            localStorage.setItem('cpm_theme', theme);
-        }
-        
-        function adjustFont(direction) {
-            currentFontSize += direction * 1;
-            currentFontSize = Math.max(12, Math.min(28, currentFontSize));
-            document.getElementById('reader-text').style.fontSize = currentFontSize + 'px';
-        }
-        
-        function renderLessonsList() {
-            const listContainer = document.getElementById('dashboard-lessons');
-            listContainer.innerHTML = '';
-            
-            BOOK_DATA.forEach((section, sIdx) => {
-                const sectionDone = isSectionDone(sIdx);
-                const sectionCompletedChaps = getSectionCompletedCount(sIdx);
-                const sectionTotalChaps = section.chapters.length;
-                
-                const row = document.createElement('div');
-                row.className = 'lesson-row';
-                row.onclick = () => toggleSectionChapters(sIdx);
-                
-                row.innerHTML = `
-                    <div class="lesson-row-info">
-                        <h3>${section.title}</h3>
-                        <p>${sectionCompletedChaps} de ${sectionTotalChaps} completados</p>
-                    </div>
-                    <span style="font-size: 1.1rem;">${sectionDone ? '✅' : '▶'}</span>
-                `;
-                
-                const container = document.createElement('div');
-                container.className = 'chapter-container';
-                container.id = 'chapters-container-' + sIdx;
-                
-                section.chapters.forEach((chap, cIdx) => {
-                    const isRead = isChapterRead(sIdx, cIdx);
-                    
-                    const item = document.createElement('div');
-                    item.className = 'chapter-item';
-                    item.onclick = (e) => {
-                        e.stopPropagation();
-                        openReader(sIdx, cIdx);
-                    };
-                    
-                    item.innerHTML = `
-                        <span>${chap.title}</span>
-                        <div class="chapter-checkbox ${isRead ? 'checked' : ''}" onclick="toggleChapterReadEvent(event, ${sIdx}, ${cIdx})"></div>
-                    `;
-                    
-                    container.appendChild(item);
-                });
-                
-                listContainer.appendChild(row);
-                listContainer.appendChild(container);
-            });
-        }
-        
-        function toggleSectionChapters(sIdx) {
-            const container = document.getElementById('chapters-container-' + sIdx);
-            const active = container.classList.contains('active');
-            
-            // Close all
-            document.querySelectorAll('.chapter-container').forEach(c => c.classList.remove('active'));
-            
-            if (!active) {
-                container.classList.add('active');
-            }
-        }
-        
-        function toggleChapterReadEvent(e, sIdx, cIdx) {
-            e.stopPropagation();
-            const key = sIdx + '_' + cIdx;
-            readChapters[key] = !readChapters[key];
-            localStorage.setItem('cpm_read_chapters', JSON.stringify(readChapters));
-            
-            renderLessonsList();
-            updateProgress();
-            
-            // Update button if reading
-            if (currentSecIdx === sIdx && currentChapIdx === cIdx) {
-                updateReaderButton();
-            }
-        }
-        
-        function isChapterRead(sIdx, cIdx) {
-            return !!readChapters[sIdx + '_' + cIdx];
-        }
-        
-        function isSectionDone(sIdx) {
-            return BOOK_DATA[sIdx].chapters.every((_, cIdx) => isChapterRead(sIdx, cIdx));
-        }
-        
-        function getSectionCompletedCount(sIdx) {
-            return BOOK_DATA[sIdx].chapters.filter((_, cIdx) => isChapterRead(sIdx, cIdx)).length;
-        }
-        
-        function updateProgress() {
-            let total = 0;
-            let completed = 0;
-            
-            BOOK_DATA.forEach((sec, sIdx) => {
-                sec.chapters.forEach((_, cIdx) => {
-                    total++;
-                    if (isChapterRead(sIdx, cIdx)) completed++;
-                });
-            });
-            
-            const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
-            
-            const circle = document.getElementById('dashboard-circle');
-            circle.style.setProperty('--p-val', percentage);
-            circle.setAttribute('data-progress', percentage + '%');
-            
-            document.getElementById('dashboard-text').textContent = `Lecciones: ${completed} de ${total} completadas`;
-        }
-        
-        function switchView(viewName) {
-            document.querySelectorAll('.view-panel').forEach(v => v.classList.remove('active'));
-            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-            
-            document.getElementById('view-' + viewName).classList.add('active');
-            document.getElementById('btn-nav-' + viewName).classList.add('active');
-            
-            // Update header sub-title
-            const headerSub = document.getElementById('header-chapter');
-            if (viewName === 'dashboard') {
-                headerSub.textContent = 'Dashboard';
-            } else if (viewName === 'simulador') {
-                headerSub.textContent = 'Simulador Lombard';
-            } else {
-                const section = BOOK_DATA[currentSecIdx];
-                const chapter = section.chapters[currentChapIdx];
-                headerSub.textContent = chapter.title;
-            }
-            
-            // Pause audio if leaving reader view
-            if (viewName !== 'reader') {
-                // optional: audio.pause();
-            }
-        }
-        
-        function openReader(sIdx, cIdx) {
-            currentSecIdx = sIdx;
-            currentChapIdx = cIdx;
-            
-            const section = BOOK_DATA[sIdx];
-            const chapter = section.chapters[cIdx];
-            
-            // Render text content
-            const readerText = document.getElementById('reader-text');
-            let html = `<h2>${chapter.title}</h2>`;
-            
-            let first = true;
-            chapter.content.forEach(p => {
-                if (typeof p === 'string') {
-                    html += `<p class="${first ? 'no-indent' : ''}">${p}</p>`;
-                    first = false;
-                } else if (p && p.type === 'callout') {
-                    html += `<blockquote class="callout">`;
-                    p.content.forEach(line => {
-                        html += `<p>${line}</p>`;
-                    });
-                    html += `</blockquote>`;
-                    first = true;
-                }
-            });
-            
-            readerText.innerHTML = html;
-            
-            // Load Audio source
-            const audioSource = '../audiolibro/' + section.audio;
-            // Only reload audio if source changed
-            if (!audio.src.endsWith(section.audio)) {
-                audio.src = audioSource;
-                playBtn.textContent = '▶';
-            }
-            
-            updateReaderButton();
-            switchView('reader');
-            
-            // Scroll reader back to top
-            document.getElementById('content-area').scrollTop = 0;
-        }
-        
-        function updateReaderButton() {
-            const btn = document.getElementById('reader-done-btn');
-            const continueBtn = document.getElementById('reader-continue-btn');
-            const isRead = isChapterRead(currentSecIdx, currentChapIdx);
-            
-            if (isRead) {
-                btn.textContent = 'Leído ✓';
-                btn.style.backgroundColor = 'rgba(16, 185, 129, 0.15)';
-                btn.style.color = 'var(--accent-green)';
-                btn.style.border = '1px solid var(--accent-green)';
-            } else {
-                btn.textContent = 'Marcar Leído';
-                btn.style.backgroundColor = 'var(--card-bg)';
-                btn.style.color = 'var(--text-primary)';
-                btn.style.border = '1px solid var(--border-color)';
-            }
-            
-            const next = getNextChapter();
-            if (next) {
-                continueBtn.textContent = 'Continuar';
-            } else {
-                continueBtn.textContent = 'Finalizar Curso';
-            }
-        }
-        
-        function getNextChapter() {
-            let nextSec = currentSecIdx;
-            let nextChap = currentChapIdx + 1;
-            
-            if (nextChap >= BOOK_DATA[nextSec].chapters.length) {
-                nextSec++;
-                nextChap = 0;
-            }
-            
-            if (nextSec >= BOOK_DATA.length) {
-                return null;
-            }
-            return { secIdx: nextSec, chapIdx: nextChap };
-        }
-        
-        function clickContinue() {
-            // Mark current as read if not already
-            const key = currentSecIdx + '_' + currentChapIdx;
-            if (!readChapters[key]) {
-                readChapters[key] = true;
-                localStorage.setItem('cpm_read_chapters', JSON.stringify(readChapters));
-                renderLessonsList();
-                updateProgress();
-            }
-            
-            const next = getNextChapter();
-            if (next) {
-                openReader(next.secIdx, next.chapIdx);
-            } else {
-                alert("¡Felicidades! Has completado todas las lecciones del curso.");
-                switchView('dashboard');
-            }
-        }
-        
-        function markCurrentChapterRead() {
-            const key = currentSecIdx + '_' + currentChapIdx;
-            readChapters[key] = !readChapters[key];
-            localStorage.setItem('cpm_read_chapters', JSON.stringify(readChapters));
-            
-            renderLessonsList();
-            updateProgress();
-            updateReaderButton();
-        }
-        
-        // Audio Player controls
-        function toggleAudio() {
-            if (audio.paused) {
-                audio.play().then(() => {
-                    playBtn.textContent = '⏸';
-                }).catch(err => {
-                    console.log("Audio play error", err);
-                });
-            } else {
-                audio.pause();
-                playBtn.textContent = '▶';
-            }
-        }
-        
-        function updateAudioProgress() {
-            if (audio.duration) {
-                const pct = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = pct + '%';
-                
-                // Format time
-                const minutes = Math.floor(audio.currentTime / 60);
-                const seconds = Math.floor(audio.currentTime % 60);
-                timeLabel.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            }
-        }
-        
-        function seekAudio(e) {
-            const rect = sliderBg.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-            const pct = clickX / rect.width;
-            
-            if (audio.duration) {
-                audio.currentTime = pct * audio.duration;
-            }
-        }
-        
-        // Lombard Simulation Logic
-        function runSimulation() {
-            const portfolio = parseFloat(document.getElementById('sim-portfolio').value) || 0;
-            const loan = parseFloat(document.getElementById('sim-loan').value) || 0;
-            const rate = parseFloat(document.getElementById('sim-rate').value) || 0;
-            const growth = parseFloat(document.getElementById('sim-growth').value) || 0;
-            const drop = parseFloat(document.getElementById('sim-drop').value) || 0;
-            
-            document.getElementById('sim-drop-val').textContent = drop + '% de caída';
-            
-            // Adjust Portfolio based on Simulated Drop
-            const adjustedPortfolio = portfolio * (1 - (drop / 100));
-            
-            // LTV Calculations
-            const initialLTV = portfolio > 0 ? (loan / portfolio) * 100 : 0;
-            const adjustedLTV = adjustedPortfolio > 0 ? (loan / adjustedPortfolio) * 100 : 0;
-            
-            // Interest and Growth
-            const annualInterest = loan * (rate / 100);
-            const annualGrowth = portfolio * (growth / 100);
-            const netGain = annualGrowth - annualInterest;
-            
-            // Format numbers
-            const formatEuro = (val) => {
-                const prefix = val >= 0 ? '+' : '';
-                return prefix + val.toLocaleString('es-ES', { maximumFractionDigits: 0 }) + ' €';
-            };
-            
-            document.getElementById('out-ltv').textContent = `${initialLTV.toFixed(1)}% / ${adjustedLTV.toFixed(1)}%`;
-            document.getElementById('out-interest').textContent = '-' + annualInterest.toLocaleString('es-ES', { maximumFractionDigits: 0 }) + ' €';
-            document.getElementById('out-portfolio-growth').textContent = '+' + annualGrowth.toLocaleString('es-ES', { maximumFractionDigits: 0 }) + ' €';
-            
-            const netLabel = document.getElementById('out-net');
-            netLabel.textContent = formatEuro(netGain);
-            if (netGain >= 0) {
-                netLabel.style.color = 'var(--accent-green)';
-            } else {
-                netLabel.style.color = '#EF4444';
-            }
-            
-            // Safety status
-            const statusLabel = document.getElementById('out-status');
-            if (adjustedLTV >= 85) {
-                statusLabel.textContent = '⚠️ MARGIN CALL!';
-                statusLabel.className = 'status-badge status-risk';
-            } else if (adjustedLTV >= 60) {
-                statusLabel.textContent = 'Riesgo Moderado';
-                statusLabel.className = 'status-badge';
-                statusLabel.style.backgroundColor = 'rgba(245, 158, 11, 0.15)';
-                statusLabel.style.color = '#F59E0B';
-            } else {
-                statusLabel.textContent = 'Zona Segura';
-                statusLabel.className = 'status-badge status-safe';
-            }
-        }
-        
-        // Service Worker registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').then(() => {
-                console.log('Service Worker Registered');
-            });
-        }
-        
-        window.onload = initApp;
-    </script>
-</body>
-</html>
+.btn-entrar:hover {
+  background: var(--gold-text); /* Relleno con degradado oro */
+  color: var(--bg-main); /* El texto cambia a oscuro */
+  box-shadow: 0 8px 24px rgba(229, 193, 88, 0.3); /* Resplandor dorado retroiluminado */
+  border-color: transparent;
+  transform: scale(1.02); /* Sutil aumento de tamaño */
+}
