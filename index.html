@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0B0E14;
-            --card-bg: #151B26;
-            --text-primary: #F1F5F9;
+            --bg-color: #060913;
+            --card-bg: rgba(15, 22, 42, 0.65);
+            --text-primary: #F8FAFC;
             --text-secondary: #94A3B8;
-            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --gold-hover: linear-gradient(135deg, #FCF6BA 0%, #BF953F 50%, #AA771C 100%);
+            --gold-gradient: linear-gradient(135deg, #FFD700 0%, #FFEFA6 40%, #C8A050 70%, #B8860B 100%);
+            --border-color: rgba(229, 193, 88, 0.15);
+            --gold-hover: linear-gradient(135deg, #FFEFA6 0%, #FFD700 50%, #B8860B 100%);
         }
 
         * {
@@ -140,6 +140,8 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             text-decoration: none;
             color: inherit;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
         }
 
         .card::before {
