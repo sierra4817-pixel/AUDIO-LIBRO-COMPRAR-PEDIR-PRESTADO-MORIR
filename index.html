@@ -323,15 +323,17 @@
         #reader-text {
             font-family: 'Lora', Georgia, serif;
             font-size: 1.05rem;
-            line-height: 1.6;
+            line-height: 1.75;
             margin-top: 15px;
             transition: font-size 0.2s;
         }
 
         #reader-text p {
-            margin: 0 0 0.8em 0;
+            margin: 0 0 0.5em 0;
             text-align: justify;
-            text-indent: 1.5em;
+            text-indent: 1.8em;
+            orphans: 3;
+            widows: 3;
         }
 
         #reader-text p.no-indent {
@@ -340,29 +342,85 @@
 
         #reader-text h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             text-align: center;
-            margin-top: 1.5em;
-            color: var(--accent-gold);
+            margin-top: 1.2em;
+            margin-bottom: 1.8em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         #reader-text h3 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
-            margin-top: 1.4em;
-            border-left: 2px solid var(--accent-gold);
-            padding-left: 8px;
+            letter-spacing: 0.8px;
+            margin-top: 2.2em;
+            margin-bottom: 1em;
+            color: var(--accent-gold);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding-bottom: 6px;
         }
 
         blockquote.callout {
-            background-color: rgba(255, 255, 255, 0.03);
+            background-color: rgba(253, 240, 166, 0.03);
             border-left: 3px solid var(--accent-gold);
-            padding: 10px 14px;
-            margin: 15px 0;
-            font-family: monospace;
-            font-size: 0.85rem;
-            border-radius: 0 4px 4px 0;
+            padding: 16px 20px;
+            margin: 24px 0;
+            font-family: 'Lora', Georgia, serif;
+            font-style: italic;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            border-radius: 0 8px 8px 0;
+            color: var(--text-primary);
+        }
+
+        body.cream-mode blockquote.callout {
+            background-color: rgba(179, 143, 36, 0.04);
+        }
+
+        body.light-mode blockquote.callout {
+            background-color: rgba(161, 123, 27, 0.03);
+        }
+
+        blockquote.callout p {
+            margin: 0 0 6px 0 !important;
+            text-indent: 0 !important;
+        }
+
+        blockquote.callout p:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            float: left;
+            margin-top: 5px;
+            margin-right: 10px;
+            line-height: 0.85;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-separator {
+            text-align: center;
+            margin: 2.5em 0;
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            letter-spacing: 0.6em;
+            opacity: 0.75;
+        }
+
+        #reader-text ::selection {
+            background: rgba(253, 240, 166, 0.25);
+            color: var(--text-primary);
         }
 
         body.cream-mode blockquote.callout {
@@ -812,21 +870,32 @@
             const readerText = document.getElementById('reader-text');
             let html = `<h2>${chapter.title}</h2>`;
             
-            let first = true;
+            let nextNoIndent = true; // The very first paragraph gets no-indent
+            
             chapter.content.forEach((p, pIdx) => {
                 if (typeof p === 'string') {
-                    html += `<p class="sync-paragraph ${first ? 'no-indent' : ''}" data-p-idx="${pIdx}">${p}</p>`;
-                    first = false;
+                    const pTrimmed = p.trim();
+                    if (pTrimmed === '---' || pTrimmed === '***' || pTrimmed === '✦ ✦ ✦' || pTrimmed === '✦✦✦') {
+                        html += `<div class="section-separator">✦  ✦  ✦</div>`;
+                        nextNoIndent = true;
+                    } else {
+                        // Apply drop-cap if it's the first paragraph of Lección I-V or Prólogo
+                        const isDropCap = (pIdx === 0 && sIdx < 6); // Prólogo is 0, Lección I-V are 1-5.
+                        const pClass = (nextNoIndent ? 'no-indent' : '') + (isDropCap ? ' drop-cap' : '');
+                        
+                        html += `<p class="sync-paragraph ${pClass}" data-p-idx="${pIdx}">${p}</p>`;
+                        nextNoIndent = false;
+                    }
                 } else if (p && p.type === 'heading') {
                     html += `<h3 class="sync-paragraph" data-p-idx="${pIdx}">${p.content}</h3>`;
-                    first = true;
+                    nextNoIndent = true; // paragraph after a heading gets no-indent
                 } else if (p && p.type === 'callout') {
                     html += `<blockquote class="callout sync-paragraph" data-p-idx="${pIdx}">`;
                     p.content.forEach(line => {
                         html += `<p>${line}</p>`;
                     });
                     html += `</blockquote>`;
-                    first = true;
+                    nextNoIndent = true; // paragraph after a callout block gets no-indent
                 }
             });
             
