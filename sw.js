@@ -1,9 +1,9 @@
-const CACHE_NAME = 'cpm-reader-v1';
+const CACHE_NAME = 'cpm-reader-v2';
 const ASSETS = [
   'index.html',
   'book_data.js',
-  'manifest.json',
-  'icon.png',
+  'manifest.json?v=2',
+  'icon.png?v=2',
   'logo.png'
 ];
 
