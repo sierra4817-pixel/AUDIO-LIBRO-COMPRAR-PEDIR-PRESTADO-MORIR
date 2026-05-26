@@ -512,6 +512,33 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(184, 134, 11, 0.2);
         }
+
+        .sync-paragraph {
+            transition: opacity 0.4s ease, color 0.4s ease, border-left 0.4s ease, padding-left 0.4s ease;
+            border-left: 3px solid transparent;
+            padding-left: 0;
+            cursor: pointer;
+        }
+        
+        .sync-paragraph:hover {
+            color: var(--text-primary) !important;
+            opacity: 0.85 !important;
+        }
+        
+        .active-sync-paragraph {
+            border-left: 3px solid var(--accent-gold) !important;
+            padding-left: 10px !important;
+            font-weight: 500;
+            background: linear-gradient(90deg, rgba(253, 240, 166, 0.08) 0%, transparent 100%) !important;
+        }
+        
+        body.cream-mode .active-sync-paragraph {
+            background: linear-gradient(90deg, rgba(179, 143, 36, 0.08) 0%, transparent 100%) !important;
+        }
+        
+        body.light-mode .active-sync-paragraph {
+            background: linear-gradient(90deg, rgba(161, 123, 27, 0.08) 0%, transparent 100%) !important;
+        }
     </style>
 </head>
 <body>
@@ -662,6 +689,10 @@
         const timeLabel = document.getElementById('audio-time-label');
         const sliderBg = document.getElementById('audio-slider-bg');
         
+        // Dynamic Sync Ranges
+        let paragraphRanges = [];
+        let lastActiveElement = null;
+        
         // Initialize App
         function initApp() {
             renderLessonsList();
@@ -670,7 +701,13 @@
             
             // Audio setup
             playBtn.addEventListener('click', toggleAudio);
-            audio.addEventListener('timeupdate', updateAudioProgress);
+            audio.addEventListener('timeupdate', () => {
+                updateAudioProgress();
+                syncTextWithAudio();
+            });
+            audio.addEventListener('play', syncTextWithAudio);
+            audio.addEventListener('pause', syncTextWithAudio);
+            audio.addEventListener('seeked', syncTextWithAudio);
             sliderBg.addEventListener('click', seekAudio);
             
             // Restore theme
@@ -697,74 +734,22 @@
             listContainer.innerHTML = '';
             
             BOOK_DATA.forEach((section, sIdx) => {
-                const sectionDone = isSectionDone(sIdx);
-                const sectionCompletedChaps = getSectionCompletedCount(sIdx);
-                const sectionTotalChaps = section.chapters.length;
+                const isRead = isSectionDone(sIdx);
                 
                 const row = document.createElement('div');
                 row.className = 'lesson-row';
-                row.onclick = () => toggleSectionChapters(sIdx);
+                row.onclick = () => openReader(sIdx, 0);
                 
                 row.innerHTML = `
                     <div class="lesson-row-info">
                         <h3>${section.title}</h3>
-                        <p>${sectionCompletedChaps} de ${sectionTotalChaps} completados</p>
+                        <p>${isRead ? 'Lección completada' : 'Pendiente de lectura'}</p>
                     </div>
-                    <span style="font-size: 1.1rem;">${sectionDone ? '✅' : '▶'}</span>
+                    <span style="font-size: 1.1rem;">${isRead ? '✅' : '▶'}</span>
                 `;
                 
-                const container = document.createElement('div');
-                container.className = 'chapter-container';
-                container.id = 'chapters-container-' + sIdx;
-                
-                section.chapters.forEach((chap, cIdx) => {
-                    const isRead = isChapterRead(sIdx, cIdx);
-                    
-                    const item = document.createElement('div');
-                    item.className = 'chapter-item';
-                    item.onclick = (e) => {
-                        e.stopPropagation();
-                        openReader(sIdx, cIdx);
-                    };
-                    
-                    item.innerHTML = `
-                        <span>${chap.title}</span>
-                        <div class="chapter-checkbox ${isRead ? 'checked' : ''}" onclick="toggleChapterReadEvent(event, ${sIdx}, ${cIdx})"></div>
-                    `;
-                    
-                    container.appendChild(item);
-                });
-                
                 listContainer.appendChild(row);
-                listContainer.appendChild(container);
             });
-        }
-        
-        function toggleSectionChapters(sIdx) {
-            const container = document.getElementById('chapters-container-' + sIdx);
-            const active = container.classList.contains('active');
-            
-            // Close all
-            document.querySelectorAll('.chapter-container').forEach(c => c.classList.remove('active'));
-            
-            if (!active) {
-                container.classList.add('active');
-            }
-        }
-        
-        function toggleChapterReadEvent(e, sIdx, cIdx) {
-            e.stopPropagation();
-            const key = sIdx + '_' + cIdx;
-            readChapters[key] = !readChapters[key];
-            localStorage.setItem('cpm_read_chapters', JSON.stringify(readChapters));
-            
-            renderLessonsList();
-            updateProgress();
-            
-            // Update button if reading
-            if (currentSecIdx === sIdx && currentChapIdx === cIdx) {
-                updateReaderButton();
-            }
         }
         
         function isChapterRead(sIdx, cIdx) {
@@ -772,22 +757,19 @@
         }
         
         function isSectionDone(sIdx) {
-            return BOOK_DATA[sIdx].chapters.every((_, cIdx) => isChapterRead(sIdx, cIdx));
+            return isChapterRead(sIdx, 0);
         }
         
         function getSectionCompletedCount(sIdx) {
-            return BOOK_DATA[sIdx].chapters.filter((_, cIdx) => isChapterRead(sIdx, cIdx)).length;
+            return isSectionDone(sIdx) ? 1 : 0;
         }
         
         function updateProgress() {
-            let total = 0;
+            let total = BOOK_DATA.length;
             let completed = 0;
             
-            BOOK_DATA.forEach((sec, sIdx) => {
-                sec.chapters.forEach((_, cIdx) => {
-                    total++;
-                    if (isChapterRead(sIdx, cIdx)) completed++;
-                });
+            BOOK_DATA.forEach((_, sIdx) => {
+                if (isSectionDone(sIdx)) completed++;
             });
             
             const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -817,11 +799,6 @@
                 const chapter = section.chapters[currentChapIdx];
                 headerSub.textContent = chapter.title;
             }
-            
-            // Pause audio if leaving reader view
-            if (viewName !== 'reader') {
-                // optional: audio.pause();
-            }
         }
         
         function openReader(sIdx, cIdx) {
@@ -836,12 +813,15 @@
             let html = `<h2>${chapter.title}</h2>`;
             
             let first = true;
-            chapter.content.forEach(p => {
+            chapter.content.forEach((p, pIdx) => {
                 if (typeof p === 'string') {
-                    html += `<p class="${first ? 'no-indent' : ''}">${p}</p>`;
+                    html += `<p class="sync-paragraph ${first ? 'no-indent' : ''}" data-p-idx="${pIdx}">${p}</p>`;
                     first = false;
+                } else if (p && p.type === 'heading') {
+                    html += `<h3 class="sync-paragraph" data-p-idx="${pIdx}">${p.content}</h3>`;
+                    first = true;
                 } else if (p && p.type === 'callout') {
-                    html += `<blockquote class="callout">`;
+                    html += `<blockquote class="callout sync-paragraph" data-p-idx="${pIdx}">`;
                     p.content.forEach(line => {
                         html += `<p>${line}</p>`;
                     });
@@ -854,17 +834,112 @@
             
             // Load Audio source
             const audioSource = section.audio;
-            // Only reload audio if source changed
             if (!audio.src.endsWith(section.audio)) {
                 audio.src = audioSource;
                 playBtn.textContent = '▶';
             }
             
+            prepareParagraphSync();
             updateReaderButton();
             switchView('reader');
             
             // Scroll reader back to top
             document.getElementById('content-area').scrollTop = 0;
+        }
+        
+        function prepareParagraphSync() {
+            paragraphRanges = [];
+            lastActiveElement = null;
+            
+            const readerText = document.getElementById('reader-text');
+            const elements = readerText.querySelectorAll('.sync-paragraph');
+            
+            let totalChars = 0;
+            const elementData = [];
+            
+            elements.forEach(el => {
+                const text = el.innerText.trim();
+                if (text.length > 0) {
+                    elementData.push({ el, length: text.length });
+                    totalChars += text.length;
+                }
+            });
+            
+            let currentChars = 0;
+            elementData.forEach(item => {
+                const startRatio = currentChars / totalChars;
+                currentChars += item.length;
+                const endRatio = currentChars / totalChars;
+                
+                paragraphRanges.push({
+                    element: item.el,
+                    startRatio: startRatio,
+                    endRatio: endRatio
+                });
+                
+                item.el.onclick = () => {
+                    if (audio.duration) {
+                        audio.currentTime = startRatio * audio.duration;
+                        syncTextWithAudio();
+                        if (audio.paused) {
+                            audio.play().then(() => {
+                                playBtn.textContent = '⏸';
+                            }).catch(err => console.log("Play error on click seek:", err));
+                        }
+                    }
+                };
+            });
+        }
+        
+        function syncTextWithAudio() {
+            if (!audio.duration || paragraphRanges.length === 0) return;
+            
+            const isPlaying = !audio.paused;
+            const playbackRatio = audio.currentTime / audio.duration;
+            let activeItem = null;
+            
+            for (let i = 0; i < paragraphRanges.length; i++) {
+                const item = paragraphRanges[i];
+                if (playbackRatio >= item.startRatio && playbackRatio <= item.endRatio) {
+                    activeItem = item;
+                    break;
+                }
+            }
+            
+            if (!activeItem && playbackRatio >= 0.99) activeItem = paragraphRanges[paragraphRanges.length - 1];
+            if (!activeItem && playbackRatio <= 0.01) activeItem = paragraphRanges[0];
+            
+            paragraphRanges.forEach(item => {
+                if (isPlaying) {
+                    if (item === activeItem) {
+                        item.element.style.opacity = '1';
+                        item.element.style.color = 'var(--text-primary)';
+                        item.element.classList.add('active-sync-paragraph');
+                    } else {
+                        item.element.style.opacity = '0.4';
+                        item.element.style.color = 'var(--text-secondary)';
+                        item.element.classList.remove('active-sync-paragraph');
+                    }
+                } else {
+                    if (item === activeItem) {
+                        item.element.style.opacity = '1';
+                        item.element.style.color = 'var(--text-primary)';
+                        item.element.classList.add('active-sync-paragraph');
+                    } else {
+                        item.element.style.opacity = '1';
+                        item.element.style.color = 'var(--text-primary)';
+                        item.element.classList.remove('active-sync-paragraph');
+                    }
+                }
+            });
+            
+            if (activeItem && lastActiveElement !== activeItem.element) {
+                activeItem.element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                lastActiveElement = activeItem.element;
+            }
         }
         
         function updateReaderButton() {
@@ -893,22 +968,14 @@
         }
         
         function getNextChapter() {
-            let nextSec = currentSecIdx;
-            let nextChap = currentChapIdx + 1;
-            
-            if (nextChap >= BOOK_DATA[nextSec].chapters.length) {
-                nextSec++;
-                nextChap = 0;
-            }
-            
+            let nextSec = currentSecIdx + 1;
             if (nextSec >= BOOK_DATA.length) {
                 return null;
             }
-            return { secIdx: nextSec, chapIdx: nextChap };
+            return { secIdx: nextSec, chapIdx: 0 };
         }
         
         function clickContinue() {
-            // Mark current as read if not already
             const key = currentSecIdx + '_' + currentChapIdx;
             if (!readChapters[key]) {
                 readChapters[key] = true;
@@ -955,7 +1022,6 @@
                 const pct = (audio.currentTime / audio.duration) * 100;
                 progressBar.style.width = pct + '%';
                 
-                // Format time
                 const minutes = Math.floor(audio.currentTime / 60);
                 const seconds = Math.floor(audio.currentTime % 60);
                 timeLabel.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -969,6 +1035,7 @@
             
             if (audio.duration) {
                 audio.currentTime = pct * audio.duration;
+                syncTextWithAudio();
             }
         }
         
@@ -982,19 +1049,15 @@
             
             document.getElementById('sim-drop-val').textContent = drop + '% de caída';
             
-            // Adjust Portfolio based on Simulated Drop
             const adjustedPortfolio = portfolio * (1 - (drop / 100));
             
-            // LTV Calculations
             const initialLTV = portfolio > 0 ? (loan / portfolio) * 100 : 0;
             const adjustedLTV = adjustedPortfolio > 0 ? (loan / adjustedPortfolio) * 100 : 0;
             
-            // Interest and Growth
             const annualInterest = loan * (rate / 100);
             const annualGrowth = portfolio * (growth / 100);
             const netGain = annualGrowth - annualInterest;
             
-            // Format numbers
             const formatEuro = (val) => {
                 const prefix = val >= 0 ? '+' : '';
                 return prefix + val.toLocaleString('es-ES', { maximumFractionDigits: 0 }) + ' €';
@@ -1012,7 +1075,6 @@
                 netLabel.style.color = '#EF4444';
             }
             
-            // Safety status
             const statusLabel = document.getElementById('out-status');
             if (adjustedLTV >= 85) {
                 statusLabel.textContent = '⚠️ MARGIN CALL!';

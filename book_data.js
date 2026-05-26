@@ -1,11 +1,11 @@
 const BOOK_DATA = [
   {
-    "id": "preliminar",
-    "title": "PRELIMINAR",
+    "id": "prologo",
+    "title": "PRÓLOGO",
     "audio": "01_Prologo.mp3",
     "chapters": [
       {
-        "title": "PRELIMINAR",
+        "title": "PRÓLOGO",
         "content": [
           "COMPRAR,",
           "PEDIR PRESTADO,",
@@ -23,19 +23,7 @@ const BOOK_DATA = [
           "Este libro tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero, fiscal ni legal. El autor y el editor no se hacen responsables de las decisiones que el lector tome basándose en su contenido.",
           "A todos los que madrugaron, trabajaron duro",
           "y aun así sintieron que el sistema no jugaba limpio.",
-          "Este libro es para vosotros."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "prologo",
-    "title": "PRÓLOGO",
-    "audio": "01_Prologo.mp3",
-    "chapters": [
-      {
-        "title": "PRÓLOGO",
-        "content": [
+          "Este libro es para vosotros.",
           "PRÓLOGO",
           "Dos hombres, el mismo café",
           "Carlos tiene 45 años. Lleva veinte trabajando en una empresa de logística en las afueras de Madrid. Cobra 38.000 euros al año brutos, aunque en su cuenta nunca llegan tantos. Paga su hipoteca, educa a sus dos hijos, ahorra lo que puede y cada diciembre espera que la declaración de la renta no le salga a pagar.",
@@ -59,8 +47,12 @@ const BOOK_DATA = [
     "audio": "02_Leccion_I_Los_ricos_no_trabajan_por_una_nomina.mp3",
     "chapters": [
       {
-        "title": "EL DESPERTAR DE CARLOS: DE LA NÓMINA AL PRIMER FONDO",
+        "title": "LECCIÓN I: Los ricos no trabajan por una nómina",
         "content": [
+          {
+            "type": "heading",
+            "content": "EL DESPERTAR DE CARLOS: DE LA NÓMINA AL PRIMER FONDO"
+          },
           "Carlos González tenía cuarenta y tres años cuando tocó fondo. No financieramente —eso vendría después— sino existencialmente. Estaba sentado en el cubículo de su oficina de logística en Alcorcón, mirando la pantalla del ordenador donde acababa de recibir su nómina de marzo. 2.847 euros netos. Después de quince años en la empresa.",
           "A su lado, el monitor secundario mostraba el Excel que llevaba desde enero. Una columna titulada “Ahorro”, otra “Inversión”, otra “Impuestos pagados sin saberlo”. En la fila de impuestos, la suma automática le devolvía una cifra que le hizo sentir náuseas: 127.000 euros en quince años. Pagados. Sin discusión. Sin alternativa.",
           "Fue en ese momento, mientras su compañero de cubiculo discutía por teléfono con su operador de telefonía, cuando Carlos decidió que necesitaba entender qué le estaba pasando con el dinero.",
@@ -97,12 +89,11 @@ const BOOK_DATA = [
           "Carlos, con la mitad de su capital fuera del mercado, no se benefició de esa recuperación. Sus 7.500 euros restantes volvieron a los 7.500 iniciales. Pero los 7.500 que había sacado… siguieron siendo 7.500. Perdió la subida. Realizó una pérdida fiscal que podría compensar en el futuro, sí, pero perdió algo más valioso: el tiempo en el mercado.",
           "Fue ese verano cuando Carlos volvió a leer el libro. Esta vez, la frase “los ricos nunca venden” le golpeó diferente. No era un consejo filosófico. Era una advertencia contra exactamente lo que él había hecho: dejarse llevar por el miedo, realizar pérdidas, perderse la recuperación.",
           "Tres años después, Carlos tiene 43.000 euros en ese mismo fondo de acumulación. Nunca ha vuelto a vender. Cuando el mercado cayó otro 20% durante la crisis siguiente, Carlos no abrió la aplicación durante dos semanas. Había aprendido, a costa de 900 euros y muchas noches sin dormir, que el peor riesgo no es el mercado. Es uno mismo.",
-          "Ahora, cuando alguien le pregunta cómo empezar a invertir, Carlos cuenta su historia completa. Incluye el error de vender. Especialmente el error de vender. Porque sabe que sin contar esa parte, estaría vendiendo una fantasía. Y las fantasías financieras destruyen patrimonios."
-        ]
-      },
-      {
-        "title": "LA CRISIS DE LIQUIDEZ DE RODRIGO: CUARENTA Y OCHO HORAS DE TERROR",
-        "content": [
+          "Ahora, cuando alguien le pregunta cómo empezar a invertir, Carlos cuenta su historia completa. Incluye el error de vender. Especialmente el error de vender. Porque sabe que sin contar esa parte, estaría vendiendo una fantasía. Y las fantasías financieras destruyen patrimonios.",
+          {
+            "type": "heading",
+            "content": "LA CRISIS DE LIQUIDEZ DE RODRIGO: CUARENTA Y OCHO HORAS DE TERROR"
+          },
           "Rodrigo Vila nunca había conocido el miedo financiero. Con cuarenta y ocho años, había heredado una cartera de 3,2 millones de euros de su padre, la había multiplicado hasta los 12 millones aplicando estrictamente la estrategia de comprar y pedir prestado, y vivía de un préstamo Lombard de 4 millones que renovaba anualmente sin preocupaciones.",
           "Su vida, desde fuera, era un catálogo de lujo discreto. El ático en Sarrià, el apartamento en Ibiza, los viajes a Asia cuatro veces al año. Pero lo que la gente no veía era la estructura: los 12 millones intactos, creciendo al 7% anual, mientras Rodrigo gastaba los 4 millones prestados a tipos del 2,8%. El diferencial de 4,2 puntos generaba 500.000 euros al año de riqueza neta, sin que Rodrigo trabajara ni un día.",
           "Hasta que llegó octubre de 2022.",
@@ -151,12 +142,11 @@ const BOOK_DATA = [
           "— No me des las gracias todavía. Vendiste en mínimos. Eso duele.",
           "Rodrigo colgó. Miró el parque. Seguía igual.",
           "Dos años después, Rodrigo ha recuperado el valor de su cartera. Las acciones que vendió en octubre de 2022 subieron un 40% en los seis meses siguientes. Pero él no lo sabe con certeza, porque dejó de seguirlas. Aprendió algo valioso: el margin call no es una teoría. Es una trampa real que puede destruir décadas de trabajo en cuarenta y ocho horas.",
-          "Ahora mantiene su LTV por debajo del 25%. Siempre. Incluso cuando el mercado sube y el banco le ofrece “aprovechar” para pedir más. Sabe que el límite real no es el que pone el banco. Es el que le permite dormir."
-        ]
-      },
-      {
-        "title": "LA HERENCIA DE LOS GARCÍA: CUANDO LA MUERTE ES EL MEJOR ASESOR FISCAL",
-        "content": [
+          "Ahora mantiene su LTV por debajo del 25%. Siempre. Incluso cuando el mercado sube y el banco le ofrece “aprovechar” para pedir más. Sabe que el límite real no es el que pone el banco. Es el que le permite dormir.",
+          {
+            "type": "heading",
+            "content": "LA HERENCIA DE LOS GARCÍA: CUANDO LA MUERTE ES EL MEJOR ASESOR FISCAL"
+          },
           "Don José García murió un martes de abril, dos meses después de cumplir los ochenta y dos años. No fue una muerte sorpresiva. El cáncer de pulmón le había dado tiempo, quizás demasiado, para arreglar sus asuntos. Eso sí, lo había hecho a su manera: callado, sin alarmar a nadie, moviendo fichas desde su escritorio de abogado con la misma precisión que había empleado durante sesenta años en los tribunales.",
           "Su hijo mayor, Miguel, recibió la llamada de la residencia a las siete de la mañana. A las nueve ya estaba sentado en el despacho de su padre, frente a una caja fuerte cuya combinación conocía desde niño: el día del cumpleaños de su madre, fallecida diez años antes.",
           "Dentro no había dinero. Había papeles. Muchos papeles.",
@@ -185,12 +175,11 @@ const BOOK_DATA = [
           "Ese mismo mes, Miguel contrató a un abogado fiscal especializado en patrimonios internacionales. No para evadir impuestos, sino para entender qué tenía y cómo conservarlo.",
           "Aprendió que el préstamo contra la cartera de acciones heredadas era la clave. Usando solo 1,5 millones de los 4,2 como garantía, obtuvo una línea de crédito de 500.000 euros al 3%. Ese dinero pagó su hipoteca, liberó flujo de caja mensual, y eliminó la presión de su salario.",
           "Los 4,2 millones siguieron creciendo al 7% anual. Los 500.000 euros fueron gastándose en vivir mejor, sin generar ingresos tributables.",
-          "Miguel sigue trabajando en su consultoría. Pero ahora lo hace por placer, no por necesidad. Y cada año, cuando renueva el préstamo Lombard, recuerda a su padre. No como un hombre rico. Como un hombre paciente. Como un hombre que entendió que la muerte, fiscalmente hablando, es la mejor herramienta de planificación patrimonial."
-        ]
-      },
-      {
-        "title": "EL ARQUITECTO INTERNACIONAL: CÓMO EL EXPATRIADO APRENDIÓ LOS SECRETOS DE ZURICH",
-        "content": [
+          "Miguel sigue trabajando en su consultoría. Pero ahora lo hace por placer, no por necesidad. Y cada año, cuando renueva el préstamo Lombard, recuerda a su padre. No como un hombre rico. Como un hombre paciente. Como un hombre que entendió que la muerte, fiscalmente hablando, es la mejor herramienta de planificación patrimonial.",
+          {
+            "type": "heading",
+            "content": "EL ARQUITECTO INTERNACIONAL: CÓMO EL EXPATRIADO APRENDIÓ LOS SECRETOS DE ZURICH"
+          },
           "Marcus Hoffmann tenía cuarenta y siete años cuando recibió la oferta que cambiaría su vida fiscal para siempre. No era una oferta de trabajo. Era una oferta de ubicación. Su empresa multinacional alemana le propuso trasladarse a la sede de Zurich como Director de Operaciones para Europa Central. El sueldo: 340.000 francos suizos brutos anuales. Lo que no le dijeron en la primera reunión, pero descubriría después, era algo mucho más valioso: los expatriados en Suiza tenían acceso al sistema fiscal privado más eficiente del mundo occidental.",
           "Marcus aterrizó en Zurich un martes de noviembre. Alquiló un apartamento en el distrito 2, cerca del lago, y empezó su nuevo trabajo. Pero su verdadera educación comenzó tres meses después, cuando conoció a Urs Kägi en una cena de networking para expatriados alemanes.",
           "Urs no era banquero. Era “gestor de patrimonio familiar independiente”, un título que Marcus no había escuchado nunca. En Suiza, explicó Urs, los grandes patrimonios no confían ciegamente en los bancos. Contratan profesionales independientes que coordinan bancos, abogados, y asesores fiscales para proteger los intereses del cliente, no del institución.",
@@ -199,72 +188,65 @@ const BOOK_DATA = [
           "— 1,8 millones —dijo Marcus—. Pero son euros. Los tengo que cambiar a francos.",
           "Urs sonrió. Esa era la primera señal de que Marcus tenía potencial: preocuparse por la divisa.",
           "— En Suiza, Marcus, la magia no está solo en lo que inviertes. Está en cómo lo deudas.",
-          "Por qué trabajar más no te hace más rico"
-        ]
-      },
-      {
-        "title": "CAPÍTULO 1 La Trampa de la Nómina: Cómo el Sistema Te Entrena para Perder",
-        "content": [
+          "Por qué trabajar más no te hace más rico",
+          {
+            "type": "heading",
+            "content": "CAPÍTULO 1 La Trampa de la Nómina: Cómo el Sistema Te Entrena para Perder"
+          },
           "Imagina que te invitan a jugar al ajedrez. Te sientas, colocas las piezas y empiezas a mover sin haber leído jamás las reglas. Cada vez que tu caballo avanza, te dicen que eso no se puede. Cada vez que avanzas un peón, te cobran una comisión. Y al final del juego, cuando preguntas por qué perdiste, te dicen: «Deberías haber estudiado más».",
           "Eso es, en esencia, lo que les ocurre a la mayoría de las personas con el dinero.",
           "Desde el primer sueldo que cobramos, entramos en lo que podríamos llamar el Juego de los Ingresos. Su mecánica es sencilla y brutal a la vez: trabajas, el empleador te paga, el Estado retiene su parte antes de que el dinero llegue a tu cuenta, y tú gastas lo que queda. Si quieres más, trabajas más. Si ahorras lo suficiente, quizás un día puedas retirarte.",
-          "El problema no es que este juego sea trampa. El problema es que tiene un techo. Un techo estructural, matemático, invisible. Porque en el Juego de los Ingresos, cada euro que ganas paga impuestos. Cada ascenso te acerca a un tramo fiscal más alto. Cada bonus, cada hora extra, cada esfuerzo adicional es parcialmente confiscado en el mismo momento en que se genera."
-        ]
-      },
-      {
-        "title": "La trampa del Juego de los Ingresos",
-        "content": [
+          "El problema no es que este juego sea trampa. El problema es que tiene un techo. Un techo estructural, matemático, invisible. Porque en el Juego de los Ingresos, cada euro que ganas paga impuestos. Cada ascenso te acerca a un tramo fiscal más alto. Cada bonus, cada hora extra, cada esfuerzo adicional es parcialmente confiscado en el mismo momento en que se genera.",
+          {
+            "type": "heading",
+            "content": "La trampa del Juego de los Ingresos"
+          },
           "En España, una persona que gana 60.000 euros al año tributa por el tramo marginal del 45% en IRPF para los últimos euros. Es decir: por cada 100 euros adicionales que gana, solo recibe 55. El Estado se queda 45 antes de que el dinero exista para esa persona.",
           "Pero aquí es donde la cosa se pone realmente oscura.",
           "Nadie nos enseñó esto en el colegio. Nadie nos explicó que existía otro juego, con otras reglas, en el que los impuestos se difieren, se minimizan o directamente se evitan de forma completamente legal. Un juego donde no importa cuánto ganas, sino cuánto posees.",
           "El Juego de la Riqueza no premia el esfuerzo. Premia la propiedad.",
-          "Y la transición entre uno y otro no depende del talento ni de la suerte. Depende de entender las reglas del tablero en el que estás jugando."
-        ]
-      },
-      {
-        "title": "La fábrica de Carlistas: Cómo el sistema educativo te condena a la nómina",
-        "content": [
+          "Y la transición entre uno y otro no depende del talento ni de la suerte. Depende de entender las reglas del tablero en el que estás jugando.",
+          {
+            "type": "heading",
+            "content": "La fábrica de Carlistas: Cómo el sistema educativo te condena a la nómina"
+          },
           "El sistema educativo moderno no fue diseñado para crear ricos. Fue diseñado para crear empleados obedientes, contribuyentes fiscales disciplinados y consumidores predecibles. Desde los seis años hasta los veintidós, pasas por una máquina de moldeado que te enseña exactamente lo que necesitas saber para ser Carlos, no para ser Rodrigo.",
           "Te enseñan matemáticas, sí, pero no las matemáticas del interés compuesto. Te enseñan historia, pero no la historia de cómo las familias ricas conservan su riqueza a través de generaciones. Te enseñan a leer, pero no a leer un balance de banco privado. Te enseñan a escribir, pero no a escribir un plan de inversión patrimonial.",
           "La escuela te prepara para dos cosas: ser un buen empleado y ser un buen contribuyente. Nada más.",
           "Piénsalo durante un segundo. ¿Cuántas horas dedicaste a aprender la tabla periódica? ¿Cuántas a aprender cómo funciona un fondo indexado? ¿Cuántas horas perdiste memorizando fechas de batallas medievales versus horas dedicadas a entender cómo se estructura una herencia fiscalmente eficiente?",
-          "El sistema educativo no es estúpido. Es intencional. No existe por accidente. Existe porque necesita producir millones de Carlistas que salgan cada mañana, paguen sus impuestos sobre la nómina, consuman con lo que queda, y vuelvan al trabajo al día siguiente. El sistema no tiene ningún incentivo para enseñarte el Juego de la Riqueza porque, si lo hiciera, perdería su base impositiva más leal y predecible."
-        ]
-      },
-      {
-        "title": "La Esclavitud Moderna: Impuestos al trabajo como sistema de control",
-        "content": [
+          "El sistema educativo no es estúpido. Es intencional. No existe por accidente. Existe porque necesita producir millones de Carlistas que salgan cada mañana, paguen sus impuestos sobre la nómina, consuman con lo que queda, y vuelvan al trabajo al día siguiente. El sistema no tiene ningún incentivo para enseñarte el Juego de la Riqueza porque, si lo hiciera, perdería su base impositiva más leal y predecible.",
+          {
+            "type": "heading",
+            "content": "La Esclavitud Moderna: Impuestos al trabajo como sistema de control"
+          },
           "El concepto de esclavitud moderna no implica cadenas físicas. Implica cadenas fiscales. Implica un sistema tan ingeniosamente diseñado que el trabajador medio no solo acepta su condición, sino que la defiende como “justicia social”.",
           "Aquí está la verdad incómoda: cuando ganas dinero trabajando, el Estado te castiga inmediatamente. Te quita entre el 20% y el 47% de tu esfuerzo antes de que ese dinero llegue a tus manos. Y luego, con lo que queda, te cobra IVA del 21% cuando lo gastas. Y luego impuestos especiales si compras carburante, alcohol, tabaco. Y luego impuesto de patrimonio si logras ahorrar demasiado. Y luego, cuando mueres, impuesto de sucesiones para que tus hijos paguen otra vez por el dinero que ya fue gravado tres veces.",
           "El trabajador es la vaca lechera del Estado. Y la ordeñan sistemáticamente desde el primer día hasta el último.",
           "Pero hay una categoria de personas a las que este sistema no toca: los que poseen. Los que compraron activos hace décadas y nunca los vendieron. Los que viven de préstamos contra sus carteras. Los que heredan y nunca realizan ganancias.",
-          "Mientras Carlos paga el 45% de marginal en cada euro que gana trabajando 50 horas semanales, Rodrigo paga cero euros de impuestos sobre las ganancias de sus 12 millones en cartera. Cero. Porque no ha vendido. Porque el sistema solo grava las transacciones, no la tenencia. Solo grava el esfuerzo, no la propiedad."
-        ]
-      },
-      {
-        "title": "El gran gaslighting fiscal",
-        "content": [
+          "Mientras Carlos paga el 45% de marginal en cada euro que gana trabajando 50 horas semanales, Rodrigo paga cero euros de impuestos sobre las ganancias de sus 12 millones en cartera. Cero. Porque no ha vendido. Porque el sistema solo grava las transacciones, no la tenencia. Solo grava el esfuerzo, no la propiedad.",
+          {
+            "type": "heading",
+            "content": "El gran gaslighting fiscal"
+          },
           "Lo verdaderamente perverso es que el sistema te ha convencido de que esto es justo. Te han dicho que “quien más tiene, más debe pagar”. Y aceptas esa narrativa porque suena moral, suena correcto. Pero nadie te explica que “más” no se refiere al porcentaje, sino a la cantidad absoluta.",
           "Rodrigo con 12 millones pagando 0% sobre sus ganancias está pagando menos que Carlos con 38.000 euros pagando el 19% sobre cada euro que gana. En porcentaje, Carlos es el que más paga. En esfuerzo fiscal, Carlos es el esclavo que sustenta el sistema mientras Rodrigo disfruta de los beneficios.",
           "El sistema te ha enseñado a sentir culpa por querer pagar menos impuestos. “Eres avaro”, te dicen. “No piensas en la sociedad”. Pientras tanto, quienes realmente evitan impuestos de forma masiva son los que nunca venden, los que estructuran patrimonios internacionales, los que usan deuda productiva. Y ellos no sienten culpa. Porque entienden las reglas.",
           "Tú no sientes culpa cuando usas una deducción por vivienda habitual. No sientes culpa cuando declaras gastos deducibles. ¿Por qué sentiría culpa Rodrigo por no vender sus acciones? ¿Por qué sentiría culpa por pedir un préstamo contra su cartera en lugar de generar ingresos tributables?",
-          "La respuesta es que no debe sentirla. Y tú tampoco. La diferencia es que él lo sabe. Y tú, hasta ahora, no."
-        ]
-      },
-      {
-        "title": "Por qué nunca te contaron esto",
-        "content": [
+          "La respuesta es que no debe sentirla. Y tú tampoco. La diferencia es que él lo sabe. Y tú, hasta ahora, no.",
+          {
+            "type": "heading",
+            "content": "Por qué nunca te contaron esto"
+          },
           "No es conspiración. Es estructura. Es incentivos. Es matemática de poder.",
           "Imagina que mañana todas las escuelas de España enseñaran a los niños de 16 años cómo funciona realmente el sistema fiscal. Les enseñaran que la riqueza no se grava hasta que se vende. Que los préstamos contra activos no tributan. Que el interés compuesto convierte a los poseedores en acumuladores automáticos mientras los trabajadores pagan por cada euro que ganan.",
           "Imagina que esos niños crecieran sabiendo que el camino no es “estudiar, trabajar, ahorrar, jubilarse”. Que el camino es “poseer, no vender, pedir prestado, morir y transmitir”.",
           "¿Qué pasaría con el sistema?",
           "Colapsaría. O tendría que cambiar radicalmente. Y quienes se benefician del sistema actual no quieren eso. Los políticos necesitan contribuyentes fiscales que paguen regularmente. Los bancos necesitan prestatarios que trabajen para devolver sus deudas. Las empresas necesitan empleados que dependan de su nómina.",
-          "Todos necesitan que seas Carlos. Nadie quiere que seas Rodrigo. Excepto tú."
-        ]
-      },
-      {
-        "title": "El momento de la verdad",
-        "content": [
+          "Todos necesitan que seas Carlos. Nadie quiere que seas Rodrigo. Excepto tú.",
+          {
+            "type": "heading",
+            "content": "El momento de la verdad"
+          },
           "Hay un momento en la vida de cada persona que empieza a entender esto. Suele llegar tarde. Suele llegar cuando ya has perdido décadas dentro del Juego de los Ingresos.",
           "Para algunos, llega cuando ven su primera nómina y se dan cuenta de que el número bruto y el número neto parecen de universos diferentes. Para otros, cuando intentan comprar su primera vivienda y descubren que el sistema está diseñado para que pagues tres veces el valor de la casa entre capital e intereses. Para otros, cuando heredan algo y descubren que el Estado quiere su tajada incluso del dinero que ya fue gravado.",
           "El momento llega. Y entonces tienes dos opciones.",
@@ -277,12 +259,11 @@ const BOOK_DATA = [
           "Y ahora que conoces la verdad sobre el Juego de los Ingresos, es hora de que aprendas las reglas del otro juego. El que juegan Rodrigo y los suyos desde hace siglos.",
           "El sistema no te odia. El sistema ni siquiera te percibe. Eres un número en una hoja de cálculo fiscal, una fuente predecible de ingresos que se renovará mensualmente hasta que te jubiles o mueras. Eres el combustible que mantiene funcionando la máquina.",
           "Pero hay una salida. Una puerta lateral que nadie te mostró. Una forma de pasar del lado de los ordeñados al lado de los propietarios.",
-          "No es fácil. No es rápido. No es para todos. Pero es real. Y comienza exactamente aquí, en este momento, cuando decides que ya no vas a ser la víctima voluntaria de un juego que nunca elegiste jugar."
-        ]
-      },
-      {
-        "title": "La anatomía de la nómina: Cómo te roban antes de que toques tu dinero",
-        "content": [
+          "No es fácil. No es rápido. No es para todos. Pero es real. Y comienza exactamente aquí, en este momento, cuando decides que ya no vas a ser la víctima voluntaria de un juego que nunca elegiste jugar.",
+          {
+            "type": "heading",
+            "content": "La anatomía de la nómina: Cómo te roban antes de que toques tu dinero"
+          },
           "Abre tu última nómina. Mira el número grande arriba: “Total devengado”. Ese es el dinero que te costó generar con tu tiempo, tu esfuerzo, tu inteligencia. Ahora mira el número pequeño abajo: “Líquido a percibir”. Ese es el dinero que realmente puedes usar.",
           "Entre ambos números hay un abismo fiscal que la mayoría ni siquiera cuestiona. Cotización a la Seguridad Social: un 6,35% que desaparece antes de que lo notes. Retención de IRPF: entre el 15% y el 45% dependiendo de tus ingresos. Y esto es solo el principio.",
           "¿Sabías que tu empresa también “contribuye” por ti? Otro 30% aproximadamente sobre tu salario bruto en conceptos diversos. Dinero que nunca ves, que nunca podrás tocar, que desaparece en el agujero fiscal antes de que exista para ti.",
@@ -292,36 +273,33 @@ const BOOK_DATA = [
           "El trabajador español promedio perderá, a lo largo de su vida laboral, aproximadamente un millón de euros en impuestos directos. Un millón de euros que nunca verá, que nunca podrá invertir, que nunca generará rendimientos. Un millón de euros que desapareció en el sistema fiscal, alimentando una máquina que, paradójicamente, castiga precisamente a quienes la alimentan.",
           "Y después te preguntan por qué no ahorras más. Después te dicen que la gente “no planifica”. Que “vive por encima de sus posibilidades”. Que “debería ser más responsable”.",
           "La responsabilidad no es tuya. La trampa es del sistema. Y el primer paso para salir de ella es reconocerla.",
-          "═══════════════════════════════════════════════════════════════════"
-        ]
-      },
-      {
-        "title": "CAPÍTULO 2 El Otro Juego: Propiedad versus Trabajo",
-        "content": [
+          "═══════════════════════════════════════════════════════════════════",
+          {
+            "type": "heading",
+            "content": "CAPÍTULO 2 El Otro Juego: Propiedad versus Trabajo"
+          },
           "El Juego de la Riqueza funciona de manera radicalmente distinta al que conocemos. No tiene como unidad de medida el ingreso mensual, sino el patrimonio acumulado. No mide el éxito en euros cobrados, sino en activos poseídos. Y, crucialmente, no tiene como momento de tributación el trabajo, sino la transacción.",
           "La clave conceptual que lo cambia todo es esta: solo pagas impuestos cuando vendes.",
           "Si compras acciones de una empresa que multiplica su valor por diez a lo largo de veinte años y nunca las vendes, nunca pagas impuestos por esa ganancia. Para Hacienda, ese dinero no existe. Es lo que los economistas llaman ganancia no realizada: riqueza que existe en papel, pero que el sistema fiscal no puede alcanzar mientras no haya una transacción.",
           "Esto es precisamente lo que hace que los grandes patrimonios sean tan efectivos en la preservación del capital. No es magia. No es fraude. Es la comprensión profunda de un principio fiscal universal: la imposición nace del hecho imponible, y el hecho imponible en la mayoría de los sistemas tributarios del mundo occidental es la venta, no la tenencia.",
           "“La renta que no se realiza es renta que no se grava. Y los que saben esto no venden nunca.”",
           "El Juego de la Riqueza tiene tres movimientos maestros. Tres fases que, aplicadas correctamente y de forma sostenida en el tiempo, permiten acumular patrimonio a un ritmo exponencial mientras se paga una fracción mínima en impuestos. Esas tres fases son las que dan título a este libro: comprar, pedir prestado, morir.",
-          "En los próximos capítulos exploraremos cada una en detalle. Pero antes, necesitamos desmontar el mito más peligroso que el Juego de los Ingresos nos ha enseñado."
-        ]
-      },
-      {
-        "title": "Riqueza versus Renta: Las dos castas del mundo moderno",
-        "content": [
+          "En los próximos capítulos exploraremos cada una en detalle. Pero antes, necesitamos desmontar el mito más peligroso que el Juego de los Ingresos nos ha enseñado.",
+          {
+            "type": "heading",
+            "content": "Riqueza versus Renta: Las dos castas del mundo moderno"
+          },
           "Hay dos tipos de personas en el mundo: las que ganan renta y las que poseen riqueza. Y no, no son lo mismo. De hecho, son opuestos estructurales.",
           "La renta es flujo. Es dinero que entra y sale. Es la nómina, el bonus, la factura pagada. La renta se gana con el tiempo, con el esfuerzo, con el trabajo. Y la renta se grava inmediatamente. Cada euro que entra pierde su parte antes de tocar tu cuenta.",
           "La riqueza es stock. Es activos que permanecen. Es propiedad que se acumula. Es tenencia que se mantiene. La riqueza no se gana con el tiempo; se posee a través del tiempo. Y mientras no se transaccione, permanece invisible para el fisco.",
           "Piénsalo así: Carlos gana 38.000 euros al año. Eso es renta. Trabaja 2.000 horas al año para producir esos 38.000 euros. De esos 38.000, el Estado se queda casi 10.000 en retenciones y luego le exige más en la declaración. Carlos vive con 28.000 euros netos que se evaporan en alquiler, comida, transporte y quizás algo de ahorro si tiene suerte y disciplina.",
           "Rodrigo no tiene renta. No trabaja. No genera ingresos tributables. Pero posee 12 millones de euros en acciones globales. Esas acciones, ese año, suben un 7% de media. Eso es 840.000 euros de ganancia no realizada. Rodrigo no ha trabajado ni un minuto. No ha generado ningún hecho imponible. Y sin embargo es 840.000 euros más rico.",
           "Carlos pagó 10.000 euros de impuestos sobre sus 38.000 de renta. Rodrigo pagó 0 euros de impuestos sobre sus 840.000 de riqueza generada.",
-          "¿Quién es más rico al final del año? La respuesta matemática es obvia. Pero la respuesta política es incómoda. Porque el sistema te ha dicho toda tu vida que “trabajar es virtud” y “la riqueza debe pagar”. Pero la realidad es exactamente opuesta: el trabajo es castigado y la riqueza es protegida."
-        ]
-      },
-      {
-        "title": "Los mecanismos de protección patrimonial",
-        "content": [
+          "¿Quién es más rico al final del año? La respuesta matemática es obvia. Pero la respuesta política es incómoda. Porque el sistema te ha dicho toda tu vida que “trabajar es virtud” y “la riqueza debe pagar”. Pero la realidad es exactamente opuesta: el trabajo es castigado y la riqueza es protegida.",
+          {
+            "type": "heading",
+            "content": "Los mecanismos de protección patrimonial"
+          },
           "El sistema no protege a Rodrigo por error. Lo protege por diseño. Hay mecanismos estructurales que permiten que la propiedad se acumule mientras el esfuerzo se distribuye.",
           "Primer mecanismo: la diferencia fiscal entre trabajo y capital.",
           "En la mayoría de países desarrollados, los tipos impositivos sobre las rentas del trabajo son significativamente más altos que los tipos sobre las rentas del capital, cuando estas se gravan. En España, el IRPF alcanza el 47% en los tramos más altos. El Impuesto sobre el Patrimonio, donde existe, rara vez supera el 3,5% anual. Y sobre las ganancias de capital realizadas, los tipos son menores que sobre la renta laboral.",
@@ -329,12 +307,11 @@ const BOOK_DATA = [
           "Aquí está la genialidad del sistema: si nunca vendes, nunca pagas. Rodrigo puede tener 12 millones que se convirtieron en 100 millones a lo largo de su vida, y si nunca vendió ni un euro de acciones, nunca pagó impuestos sobre esas ganancias. Esas ganancias existen en el mundo real: puede usarlas como garantía para préstamos, puede hipotecarlas, puede vivir de ellas indirectamente. Pero fiscalmente, no existen.",
           "Tercer mecanismo: la transmisión generacional protegida.",
           "Cuando Rodrigo muere, sus hijos heredan sus acciones. En muchos sistemas fiscales, esas acciones se transmiten con una “base actualizada” al valor de mercado del momento del fallecimiento. Eso significa que las décadas de ganancias acumuladas durante la vida de Rodrigo desaparecen fiscalmente. Sus hijos heredan como si hubieran comprado las acciones hoy. Si venden mañana, pagan impuestos solo sobre las ganancias desde la herencia, no desde la compra original.",
-          "Es decir: Rodrigo nunca pagó. Sus hijos no pagarán por lo que Rodrigo ganó. Y si sus hijos siguen el mismo juego, sus nietos tampoco pagarán. La riqueza viaja limpia a través de generaciones, mientras el trabajador de cada generación paga su tajada fresca cada mes."
-        ]
-      },
-      {
-        "title": "Ejemplos brutales de protección a la propiedad",
-        "content": [
+          "Es decir: Rodrigo nunca pagó. Sus hijos no pagarán por lo que Rodrigo ganó. Y si sus hijos siguen el mismo juego, sus nietos tampoco pagarán. La riqueza viaja limpia a través de generaciones, mientras el trabajador de cada generación paga su tajada fresca cada mes.",
+          {
+            "type": "heading",
+            "content": "Ejemplos brutales de protección a la propiedad"
+          },
           "Ejemplo 1: El propietario de viviendas vs. el inquilino.",
           "María tiene tres pisos en Madrid que compró entre 1995 y 2005. Los alquila por 3.000 euros al mes brutos. Sobre esos ingresos, paga impuestos. Pero los pisos han subido de valor de 400.000 euros de compra a 1,2 millones de valor actual. Esa ganancia de 800.000 euros no tributa mientras no venda. María puede hipotecar esos pisos, sacar dinero, reinvertir, y nunca pagar impuestos sobre la plusvalía inmobiliaria acumulada.",
           "Pedro, el inquilino de uno de esos pisos, paga 1.000 euros al mes de alquiler. Ese gasto no le genera ningún beneficio fiscal. No está acumulando patrimonio. No está generando ganancias no realizadas. Está pagando para que María siga siendo propietaria.",
@@ -345,22 +322,20 @@ const BOOK_DATA = [
           "Ejemplo 3: El heredero vs. el ahorrador.",
           "Antonio ahorra 500 euros al mes durante 30 años. Consigue acumular 250.000 euros en fondos de inversión. Ha pagado impuestos sobre todos los euros que ahorró (eran de su nómina gravada). Paga impuestos sobre los rendimientos cada año si los fondos son de distribución. Si son de acumulación, pospone el pago hasta la venta, pero algún día pagará.",
           "Luis hereda 250.000 euros en acciones de su tío. Esas acciones costaron originalmente 50.000 euros. Luis las hereda con base actualizada a 250.000 euros. Si vende inmediatamente, no paga impuestos sobre las 200.000 euros de ganancia acumulada por su tío. Antonio pagará impuestos sobre sus ganancias. Luis no.",
-          "¿Por qué? Porque Antonio ganó su dinero trabajando. Luis lo recibió poseyendo. El sistema premia el segundo camino."
-        ]
-      },
-      {
-        "title": "La paradoja del esfuerzo fiscal",
-        "content": [
+          "¿Por qué? Porque Antonio ganó su dinero trabajando. Luis lo recibió poseyendo. El sistema premia el segundo camino.",
+          {
+            "type": "heading",
+            "content": "La paradoja del esfuerzo fiscal"
+          },
           "El trabajador esfuerza su cuerpo y su mente. Produce valor. Crea bienes y servicios. Y por ese esfuerzo, el sistema le quita entre un cuarto y la mitad de lo que genera. Luego le dice que esto es “justicia”.",
           "El poseedor no esfuerza nada. Sus activos trabajan por él. Generan valor mientras duerme. Y por esa generación pasiva, el sistema no le quita nada. Hasta que decida vender. Y si nunca decide vender, nunca le quita nada.",
           "Esta es la paradoja: el esfuerzo es castigado. La pasividad es premiada.",
           "No es moral. Es matemática. Es estructura. Es diseño de sistema.",
-          "Y lo peor es que la mayoría defiende este sistema. La mayoría cree que “quien más tiene debe pagar más”. Pero no entienden que “pagar más” no significa “pagar más porcentaje”, sino “pagar más cantidad absoluta”. Rodrigo pagando 0% sobre sus ganancias no es justicia. Es privilegio estructural. Es la definición misma de sistema diseñado para proteger a los que tienen contra los que trabajan."
-        ]
-      },
-      {
-        "title": "Por qué el sistema necesita que sigas jugando al juego equivocado",
-        "content": [
+          "Y lo peor es que la mayoría defiende este sistema. La mayoría cree que “quien más tiene debe pagar más”. Pero no entienden que “pagar más” no significa “pagar más porcentaje”, sino “pagar más cantidad absoluta”. Rodrigo pagando 0% sobre sus ganancias no es justicia. Es privilegio estructural. Es la definición misma de sistema diseñado para proteger a los que tienen contra los que trabajan.",
+          {
+            "type": "heading",
+            "content": "Por qué el sistema necesita que sigas jugando al juego equivocado"
+          },
           "Imagina que mañana todos los trabajadores de España entendieran esto. Que dejaran de ver la riqueza como algo inmoral y empezaran a verla como el objetivo legítimo que es. Que dejaran de trabajar para pagar impuestos y empezaran a trabajar para comprar activos. Que dejaran de consumir y empezaran a acumular.",
           "El sistema cambiaría. O colapsaría.",
           "El sistema necesita trabajadores que paguen impuestos. Necesita contribuyentes que generen flujo fiscal mensual. Necesita que seas Carlos, no Rodrigo. Porque Rodrigo no contribuye de forma predecible y regular. Rodrigo no depende del sistema. Rodrigo no es controlable.",
@@ -368,12 +343,11 @@ const BOOK_DATA = [
           "La pregunta es: ¿quieres seguir siendo Carlos? ¿O estás dispuesto a aprender a ser Rodrigo?",
           "Porque ser Rodrigo no requiere ser millonario para empezar. Requiere entender las reglas. Requiere cambiar la mentalidad de “ganar más” a “poseer más”. Requiere dejar de ver el dinero como algo que gastas y empezar a verlo como algo que acumulas.",
           "El Juego de la Riqueza no está cerrado. Las reglas no son secretas. Este libro es la prueba de que las reglas se pueden aprender. Pero aprenderlas no es suficiente. Hay que vivirlas. Hay que aplicarlas. Hay que dejar de ser Carlos emocionalmente para empezar a ser Rodrigo financieramente.",
-          "Eso es lo que viene a continuación. Las reglas del juego. Las tres fases. Comprar. Pedir prestado. Morir."
-        ]
-      },
-      {
-        "title": "El sistema de castas oculto: Por qué la movilidad social es un mito",
-        "content": [
+          "Eso es lo que viene a continuación. Las reglas del juego. Las tres fases. Comprar. Pedir prestado. Morir.",
+          {
+            "type": "heading",
+            "content": "El sistema de castas oculto: Por qué la movilidad social es un mito"
+          },
           "Te vendieron la idea de que vivimos en una meritocracia. De que “cualquiera puede salir adelante”. De que el esfuerzo y el talento siempre se recompensan. Es la mentira más grande del sistema, porque oculta una verdad incómoda: estamos en un sistema de castas económicas, y nacer en la casta de los trabajadores te condena a permanecer allí a menos que entiendas las reglas del otro juego.",
           "La casta de los trabajadores vive del tiempo. Vende horas por euros. Paga impuestos antes de ver el dinero. Depende de un empleador. Tiene miedo al despido. Juega dentro de un sistema diseñado para mantenerle ocupado, cansado y agradecido por las migajas que recibe.",
           "La casta de los propietarios vive de los activos. No vende horas. No depende de empleadores. No tiene jefe. No teme al despido porque su sustento viene de la propiedad, no del trabajo. Juega dentro de un sistema diseñado para proteger su riqueza y permitirle transmitirla limpiamente a las siguientes generaciones.",
@@ -381,40 +355,36 @@ const BOOK_DATA = [
           "La mayoría nunca cruza. La mayoría permanece en la casta de los trabajadores toda su vida, vendiendo su tiempo, pagando sus impuestos, consumiendo lo que queda, y muriendo con poco o nada que transmitir. No porque sean peores personas. Sino porque nunca entendieron que estaban jugando al juego equivocado.",
           "El primer paso para cambiar de casta es reconocer que existe el sistema de castas. El segundo es entender que las reglas del juego de los propietarios no son secretas, solo están ocultas a plena vista. El tercero es decidir que vas a aprender esas reglas y aplicarlas.",
           "Este libro es tu mapa para ese cruce. No será fácil. Pero es posible. Y comienza ahora.",
-          "═══════════════════════════════════════════════════════════════════"
-        ]
-      },
-      {
-        "title": "CAPÍTULO 3 La Ilusión del Esfuerzo: Por Qué Trabajar Más Nunca Te Hará Rico",
-        "content": [
+          "═══════════════════════════════════════════════════════════════════",
+          {
+            "type": "heading",
+            "content": "CAPÍTULO 3 La Ilusión del Esfuerzo: Por Qué Trabajar Más Nunca Te Hará Rico"
+          },
           "Nos han enseñado que el camino hacia la prosperidad está pavimentado de trabajo duro, disciplina y sacrificio. Y hay una verdad parcial en ese mensaje. El esfuerzo importa. La disciplina importa. Pero solos, dentro del Juego de los Ingresos, tienen un límite matemáticamente definido.",
           "Consideremos un ejemplo simple. Ana trabaja como ingeniera de software y gana 80.000 euros al año. Es brillante, ahorra el 20% de su sueldo neto, invierte en un fondo indexado y en diez años ha acumulado 150.000 euros de patrimonio.",
           "Jorge, por su parte, heredó una cartera de acciones valorada en 2 millones de euros hace diez años. No ha trabajado, no ha ahorrado, no ha hecho ningún esfuerzo particular. Simplemente no ha vendido nada. Su cartera, con un rendimiento anual del 7%, vale hoy casi 4 millones.",
-          "La diferencia entre 150.000 y 4.000.000 no es mérito. Es punto de partida y reglas del juego."
-        ]
-      },
-      {
-        "title": "La paradoja del esfuerzo",
-        "content": [
+          "La diferencia entre 150.000 y 4.000.000 no es mérito. Es punto de partida y reglas del juego.",
+          {
+            "type": "heading",
+            "content": "La paradoja del esfuerzo"
+          },
           "Cuanto más ganas dentro del Juego de los Ingresos, más impuestos pagas. Cuanto más posees dentro del Juego de la Riqueza, más crece tu patrimonio sin generar ningún hecho imponible. El sistema, literalmente, penaliza el trabajo y premia la propiedad.",
           "Esto no es un argumento contra el esfuerzo. Es un argumento para cambiar de juego cuanto antes. Para entender que el objetivo no es ganar más dentro del sistema que ya conoces, sino aprender a operar en el sistema que los grandes patrimonios utilizan.",
-          "Y ese sistema empieza con una sola idea: compra activos. No ganes más. Posee más."
-        ]
-      },
-      {
-        "title": "El techo matemático del esfuerzo laboral",
-        "content": [
+          "Y ese sistema empieza con una sola idea: compra activos. No ganes más. Posee más.",
+          {
+            "type": "heading",
+            "content": "El techo matemático del esfuerzo laboral"
+          },
           "Hay un límite físico absoluto sobre cuánto puedes ganar trabajando. Ese límite tiene varios componentes:",
           "Primero, el tiempo. Hay 24 horas en un día. Dormirás 8. Trabajarás 8-10. Te quedan 6-8 para todo lo demás. No puedes trabajar más de 24 horas diarias. Es físicamente imposible.",
           "Segundo, la tasa horaria. Incluso si eres un neurocirujano de élite ganando 1.000 euros la hora, hay un techo de mercado. No puedes cobrar 100.000 euros la hora porque nadie pagaría eso. Tu tiempo tiene un valor máximo definido por la economía.",
           "Tercero, los impuestos progresivos. Cuanto más ganes, mayor porcentaje te quitan. En España, pasar de 60.000 a 120.000 euros anuales significa que esos últimos 60.000 euros se gravan al 45% marginal. Trabajas el doble y te llevas menos del doble neto.",
           "Cuarto, el coste de oportunidad. Cada hora que trabajas es una hora que no puedes dedicar a gestionar inversiones, aprender sobre finanzas, o buscar oportunidades de activos subvalorados.",
-          "El resultado: el esfuerzo laboral tiene un retorno decreciente. Puedes trabajar el doble y ganar quizás un 60% más neto. No puedes trabajar 100 veces más. Pero sí puedes poseer activos que generen 100 veces más."
-        ]
-      },
-      {
-        "title": "La magia del interés compuesto sobre activos",
-        "content": [
+          "El resultado: el esfuerzo laboral tiene un retorno decreciente. Puedes trabajar el doble y ganar quizás un 60% más neto. No puedes trabajar 100 veces más. Pero sí puedes poseer activos que generen 100 veces más.",
+          {
+            "type": "heading",
+            "content": "La magia del interés compuesto sobre activos"
+          },
           "Mientras el trabajador vende su tiempo una vez (y cada hora solo una vez), el activo genera valor infinitamente.",
           "Un piso que compras por 200.000 euros y alquilas por 1.000 euros mensuales genera 12.000 euros anuales “trabajando” 24 horas al día, 365 días al año. El piso no se cansa. No pide vacaciones. No se queja. Solo genera.",
           "Una cartera de 2 millones de euros en índices globales genera, históricamente, 140.000 euros anuales de valoración. Esa valoración no es “trabajo”. Es el resultado de que miles de empresas, gestionadas por otros, generan beneficios que se acumulan en tu propiedad.",
@@ -424,34 +394,31 @@ const BOOK_DATA = [
           "Rodrigo nunca trabaja. A los 25 años hereda 500.000 euros. Los invierte y saca un 7% anual compuesto. No aporta ni un euro más. A los 65 años, esos 500.000 euros han crecido a 7,6 millones de euros.",
           "Carlos trabajó 40 años, sacrificó el 15% de su salario, fue disciplinado, responsable. Termina con 350.000 euros.",
           "Rodrigo no trabajó nunca, no sacrificó nada, no aportó ni un euro de su “propio esfuerzo”. Termina con 7,6 millones.",
-          "¿Es esto “justo”? No importa si es justo o no. Es matemática. Es realidad. Es cómo funciona el mundo."
-        ]
-      },
-      {
-        "title": "Por qué trabajar más horas es una trampa",
-        "content": [
+          "¿Es esto “justo”? No importa si es justo o no. Es matemática. Es realidad. Es cómo funciona el mundo.",
+          {
+            "type": "heading",
+            "content": "Por qué trabajar más horas es una trampa"
+          },
           "El sistema cultural te dice: “Si quieres salir adelante, trabaja más”. “El que madruga, Dios le ayuda”. “El esfuerzo tiene recompensa”.",
           "Esto es mentira peligrosa.",
           "Trabajar más horas dentro del Juego de los Ingresos es como correr en una cinta de gimnasio. Puedes correr el doble de rápido, sudar el doble, esforzarte el doble… y seguir en el mismo sitio. La cinta te mueve, pero no avanzas.",
           "Cuando trabajas más horas: — Subes de tramo fiscal y pagas más porcentaje — Pierdes tiempo para educarte financieramente — Pierdes tiempo para gestionar tus inversiones — Pierdes tiempo para buscar oportunidades — Te quemas física y mentalmente — Dependes más de tu empleo, lo que te hace vulnerable",
-          "El trabajador que trabaja 60 horas semanales no está “saliendo adelante”. Está profundizando su prisión. Está siendo el empleado modelo que todo sistema de nóminas necesita: alguien demasiado ocupado para cuestionar, demasiado cansado para aprender, demasiado dependiente para arriesgarse."
-        ]
-      },
-      {
-        "title": "El verdadero camino: de trabajador a propietario",
-        "content": [
+          "El trabajador que trabaja 60 horas semanales no está “saliendo adelante”. Está profundizando su prisión. Está siendo el empleado modelo que todo sistema de nóminas necesita: alguien demasiado ocupado para cuestionar, demasiado cansado para aprender, demasiado dependiente para arriesgarse.",
+          {
+            "type": "heading",
+            "content": "El verdadero camino: de trabajador a propietario"
+          },
           "No se trata de no trabajar. Se trata de cambiar QUÉ produces.",
           "El trabajador produce horas. El propietario produce rendimientos.",
           "El trabajador intercambia tiempo por dinero. El propietario acumula activos que generan dinero.",
           "El trabajador vende su tiempo una vez. El propietario posee activos que se venden infinitas veces.",
           "La transición no es inmediata. No puedes dejar de trabajar mañana y ser Rodrigo pasado mañana. Pero puedes empezar a usar tu trabajo como medio, no como fin.",
           "Tu trabajo actual debería tener un solo objetivo: acumular activos. No pagar el alquiler para siempre. No financiar un estilo de vida consumista. No mantener apariencias. Solo acumular activos.",
-          "Mientras trabajas por dinero, estás dentro del sistema. Cuando trabajas para comprar activos que trabajan por ti, estás saliendo del sistema."
-        ]
-      },
-      {
-        "title": "La ilusión del ascenso profesional",
-        "content": [
+          "Mientras trabajas por dinero, estás dentro del sistema. Cuando trabajas para comprar activos que trabajan por ti, estás saliendo del sistema.",
+          {
+            "type": "heading",
+            "content": "La ilusión del ascenso profesional"
+          },
           "Otra mentira del Juego de los Ingresos: “Si estudias más, te ascenderán, ganarás más y serás más rico”.",
           "Analicemos el ascenso típico:",
           {
@@ -463,57 +430,52 @@ const BOOK_DATA = [
           "Sí, ganas más. Pero cada euro adicional te cuesta más en impuestos. Y pagas con horas de vida. Y con estrés. Y con salud. Y con tiempo que no pasas con tu familia.",
           "El director que gana 120.000 lleva 30 años sacrificándose. Tiene quizás 400.000 ahorrados si fue muy disciplinado. Aún depende de su empleo. Si le despiden mañana, su mundo colapsa.",
           "El “arquitecto” del Juego de la Riqueza con 400.000 en activos generando un 7% anual tiene 28.000 euros anuales pasivos. No es rico, pero ya no depende de un empleo. Puede elegir. Puede decidir. Puede dormir tranquilo.",
-          "El ascenso profesional es una ilusión diseñada para mantenerte en la cinta de correr. Te dan más títulos, más responsabilidad, más estrés… y un poco más de dinero del que te quitarán en impuestos. Pero sigues siendo Carlos. Sigues vendiendo tiempo. Sigues sin poseer."
-        ]
-      },
-      {
-        "title": "El momento de escape",
-        "content": [
+          "El ascenso profesional es una ilusión diseñada para mantenerte en la cinta de correr. Te dan más títulos, más responsabilidad, más estrés… y un poco más de dinero del que te quitarán en impuestos. Pero sigues siendo Carlos. Sigues vendiendo tiempo. Sigues sin poseer.",
+          {
+            "type": "heading",
+            "content": "El momento de escape"
+          },
           "Hay un momento en la vida de cada persona donde se hace la pregunta crucial: “¿Esto es todo? ¿Voy a pasarme 40 años vendiendo mi tiempo para terminar con una pensión de mierda y un apartamento pagado?”",
           "Para la mayoría, ese momento llega demasiado tarde. Llega a los 50, cuando ya has perdido tres décadas en la cinta. Cuando tu cuerpo ya no aguanta las 60 horas semanales. Cuando te das cuenta de que tus “ahorros” no te darán para jubilarte dignamente.",
           "Para algunos afortunados, llega a los 30 o 40. Todavía tienen tiempo. Todavía pueden cambiar.",
           "El cambio no significa dejar de trabajar mañana. Significa cambiar el PROPÓSITO del trabajo. Deja de trabajar para pagar facturas. Trabaja para comprar activos. Cada euro que ganes, pregúntate: “¿Esto va a consumo o a activos?”",
           "Si va a consumo, estás siendo Carlos. Si va a activos, estás empezando a ser Rodrigo.",
-          "La transición toma años. Quizás décadas. Pero empieza con una decisión mental: “No quiero ser empleado toda mi vida. Quiero ser propietario”."
-        ]
-      },
-      {
-        "title": "La mentalidad del propietario vs. la mentalidad del empleado",
-        "content": [
+          "La transición toma años. Quizás décadas. Pero empieza con una decisión mental: “No quiero ser empleado toda mi vida. Quiero ser propietario”.",
+          {
+            "type": "heading",
+            "content": "La mentalidad del propietario vs. la mentalidad del empleado"
+          },
           "El empleado pregunta: “¿Cuánto voy a ganar este mes?” El propietario pregunta: “¿Cuánto vale mi patrimonio hoy?”",
           "El empleado se preocupa por la nómina. El propietario se preocupa por el rendimiento de sus activos.",
           "El empleado ve el dinero como algo que gasta. El propietario ve el dinero como algo que acumula.",
           "El empleado busca seguridad laboral. El propietario busca oportunidades de activos.",
           "El empleado depende del jefe. El propietario depende de sí mismo.",
-          "Esta no es una diferencia de clase social. Es una diferencia de mentalidad. Y la mentalidad se puede cambiar. Pero requiere dejar de glorificar el sacrificio laboral y empezar a glorificar la acumulación estratégica."
-        ]
-      },
-      {
-        "title": "El coste real de la ilusión del esfuerzo",
-        "content": [
+          "Esta no es una diferencia de clase social. Es una diferencia de mentalidad. Y la mentalidad se puede cambiar. Pero requiere dejar de glorificar el sacrificio laboral y empezar a glorificar la acumulación estratégica.",
+          {
+            "type": "heading",
+            "content": "El coste real de la ilusión del esfuerzo"
+          },
           "La peor parte del Juego de los Ingresos no es que pagues impuestos. Es que te convence de que tu valor como persona está en tu capacidad de esforzarte. Te hace sentir culpable por no trabajando más. Te hace sentir perezoso por querer tiempo libre. Te hace sentir irresponsable por priorizar tu patrimonio sobre el de tu empresa.",
           "Esta es la cadenas más fuerte: la mentalidad.",
           "El trabajador que se siente orgulloso de su sacrificio es el trabajador perfecto. No cuestionará. No exigirá. No buscará alternativas. Seguirá corriendo en la cinta creyendo que “algún día llegará”.",
           "No llegará.",
           "La única forma de llegar es salirse de la cinta. Cambiar de juego. Empezar a acumular activos que trabajen por ti mientras tú haces otras cosas.",
-          "El esfuerzo sigue siendo necesario. Pero el esfuerzo debe dirigirse a adquirir activos, no a vender horas. El esfuerzo debe ser para entender finanzas, para buscar oportunidades, para estructurar patrimonios. No para hacer horas extras que solo te acercan al quemado y te alejan de la libertad."
-        ]
-      },
-      {
-        "title": "Conclusión: Dejar de perseguir la ilusión",
-        "content": [
+          "El esfuerzo sigue siendo necesario. Pero el esfuerzo debe dirigirse a adquirir activos, no a vender horas. El esfuerzo debe ser para entender finanzas, para buscar oportunidades, para estructurar patrimonios. No para hacer horas extras que solo te acercan al quemado y te alejan de la libertad.",
+          {
+            "type": "heading",
+            "content": "Conclusión: Dejar de perseguir la ilusión"
+          },
           "La ilusión del esfuerzo dice: “Trabaja más y serás más rico”. La verdad dice: “Posee más y serás más rico, independientemente de cuánto trabajes”.",
           "No se trata de no trabajar. Se trata de trabajar inteligentemente, con un objetivo claro: salir del Juego de los Ingresos y entrar en el Juego de la Riqueza.",
           "Y eso empieza cuando dejas de ver el dinero como algo que ganas con el sudor de tu frente, y empiezas a verlo como algo que atraes mediante la propiedad estratégica de activos.",
           "El siguiente paso es entender CÓMO acumular esos activos. Cómo comprar sin vender. Cómo vivir de la deuda productiva. Cómo estructurar tu patrimonio para que sobreviva a tu muerte y beneficie a las siguientes generaciones.",
           "Eso es lo que viene. Las tres fases.",
           "Comprar. Pedir prestado. Morir.",
-          "Empecemos."
-        ]
-      },
-      {
-        "title": "La mentira del sacrificio: Por qué sacrificarte por tu empresa es estupidez",
-        "content": [
+          "Empecemos.",
+          {
+            "type": "heading",
+            "content": "La mentira del sacrificio: Por qué sacrificarte por tu empresa es estupidez"
+          },
           "Escucha atentamente: tu empresa no sacrificaría nada por ti. Si mañana tu departamento deja de ser rentable, te echan sin remordimientos. Si tu jefe tiene que elegir entre sus beneficios y tu empleo, elegirá sus beneficios. Si la empresa tiene que recortar, recorta. No hay lealtad recíproca. Solo contrato. Solo transacción.",
           "Entonces, ¿por qué sacrificas tu salud, tu tiempo, tu vida, por una entidad que no dudaría en despedirte? ¿Por qué haces horas extras no pagadas? ¿Por qué renuncias a vacaciones? ¿Por qué respondes mails a las 11 de la noche?",
           "Porque te han vendido la mentira de que “hay que dar el 110%”. De que “el esfuerzo extra se reconoce”. De que “así se llega a director”. Es mentira. El 110% de esfuerzo solo te acerca al 100% de agotamiento. Y cuando estés quemado, reemplazable y desechable, la empresa encontrará a otro Carlos dispuesto a dar otro 110%.",
@@ -530,8 +492,12 @@ const BOOK_DATA = [
     "audio": "03_Leccion_II_Comprar_Posee_activos_nunca_vendas.mp3",
     "chapters": [
       {
-        "title": "LA LECCIÓN DE WEALTH TAX Y EL PODER DE LA DEUDA",
+        "title": "LECCIÓN II: Comprar: Posee activos, nunca vendas",
         "content": [
+          {
+            "type": "heading",
+            "content": "LA LECCIÓN DE WEALTH TAX Y EL PODER DE LA DEUDA"
+          },
           "Una semana después, Marcus estaba sentado en la oficina de un asesor fiscal suizo especializado en expatriados. La oficina no estaba en el Bahnhofstrasse de los banqueros ostentosos. Estaba en un edificio discreto de Altstetten, con vistas al Limmat y una placa que simplemente decía “Steuerberatung”.",
           "El doctor Weber —no había título nobiliario, era doctor en Derecho Tributario— le explicó algo que Marcus no habría creído si lo leyera en un libro.",
           "— En Suiza, señor Hoffmann, tenemos el Vermögenssteuer. El Impuesto sobre el Patrimonio. Es pequeño, entre el 0,1% y el 0,3% anual sobre el patrimonio neto, dependiendo del cantón. Zurich es de los más altos: 0,3%.",
@@ -548,12 +514,11 @@ const BOOK_DATA = [
           "— Pero estoy pagando intereses. ¿Compensa?",
           "— Ahí está la magia del sistema suizo, señor Hoffmann. Los tipos de interés en Suiza son de los más bajos del mundo. El Banco Nacional Suizo ha mantenido tipos negativos o cercanos a cero durante años. Un préstamo Lombard contra una cartera diversificada de acciones globales… podemos conseguirle tipos del 1% o menos en francos suizos.",
           "— Uno por ciento —susurró Marcus.",
-          "— Uno por ciento —confirmó Weber—. Mientras sus activos crezcan al 7% histórico, usted paga el 1% de intereses, reduce su Wealth Tax, deduce los intereses de su renta… y el resultado neto es que la deuda le enriquece, no le empobrece."
-        ]
-      },
-      {
-        "title": "Capítulo 4",
-        "content": [
+          "— Uno por ciento —confirmó Weber—. Mientras sus activos crezcan al 7% histórico, usted paga el 1% de intereses, reduce su Wealth Tax, deduce los intereses de su renta… y el resultado neto es que la deuda le enriquece, no le empobrece.",
+          {
+            "type": "heading",
+            "content": "Capítulo 4"
+          },
           "Poseer sin vender",
           "El primer movimiento del Juego de la Riqueza es aparentemente simple: compra activos que crecen en valor con el tiempo y no los vendas. Acciones. Inmuebles. Participaciones en empresas privadas. Fondos de inversión de acumulación.",
           "La razón por la que este movimiento es tan poderoso tiene que ver con la naturaleza del tiempo y el interés compuesto. Albert Einstein, según se dice aunque probablemente sea apócrifa la cita, llamaba al interés compuesto «la octava maravilla del mundo». La idea es simple: si un activo crece al 7% anual, su valor se dobla cada diez años. No linealmente, sino exponencialmente.",
@@ -565,29 +530,26 @@ const BOOK_DATA = [
           "Y todo eso sin pagar un solo euro en impuestos sobre las plusvalías. Porque no ha habido ninguna venta. No ha habido ningún hecho imponible. El sistema fiscal no puede alcanzar lo que nunca se ha transaccionado.",
           "“El secreto más simple y más ignorado de las finanzas personales: compra buenos activos, no los vendas y espera.”",
           "Existe, por supuesto, una dificultad práctica evidente. ¿Cómo vives si no vendes? ¿Cómo pagas el alquiler, la cena, las vacaciones, si todo tu dinero está «atrapado» en activos que no puedes liquidar sin tributar?",
-          "La respuesta a esa pregunta es el segundo movimiento del juego. Y es donde la estrategia se vuelve verdaderamente elegante."
-        ]
-      },
-      {
-        "title": "Capítulo 5",
-        "content": [
+          "La respuesta a esa pregunta es el segundo movimiento del juego. Y es donde la estrategia se vuelve verdaderamente elegante.",
+          {
+            "type": "heading",
+            "content": "Capítulo 5"
+          },
           "La riqueza invisible",
           "En el año 2021, ProPublica, la organización periodística americana de investigación, publicó una filtración de datos fiscales del IRS, la agencia tributaria de Estados Unidos. Los documentos revelaban lo que muchos sospechaban pero nadie había podido demostrar con cifras concretas: los estadounidenses más ricos del mundo pagaban tasas fiscales efectivas que eran una fracción mínima de las que pagaba la clase media.",
           "El caso más llamativo era el de un empresario tecnológico cuyo patrimonio había crecido en 13.900 millones de dólares en un período de dos años. En ese mismo período, había declarado unos ingresos tributables de 4.200 millones y pagado aproximadamente 455 millones en impuestos federales. Su tasa fiscal efectiva era del 3,27%.",
           "Un trabajador americano de renta media, en el mismo período, habría pagado entre el 22% y el 24% de sus ingresos.",
-          "¿Cómo es posible esta diferencia? La respuesta está en la distinción entre riqueza y renta. Entre lo que posees y lo que ganas. Entre la ganancia realizada y la ganancia no realizada."
-        ]
-      },
-      {
-        "title": "Ganancia no realizada: definición",
-        "content": [
+          "¿Cómo es posible esta diferencia? La respuesta está en la distinción entre riqueza y renta. Entre lo que posees y lo que ganas. Entre la ganancia realizada y la ganancia no realizada.",
+          {
+            "type": "heading",
+            "content": "Ganancia no realizada: definición"
+          },
           "La ganancia no realizada es el incremento de valor de un activo que aún no ha sido vendido. Si compraste acciones por 10.000 euros y hoy valen 100.000 euros, tienes 90.000 euros de ganancia no realizada. Esos 90.000 euros son riqueza real, pero el sistema fiscal no puede gravarlos hasta que los materialices mediante una venta.",
-          "La riqueza invisible es, paradójicamente, la forma más efectiva de acumular riqueza. Cuanto más puedas mantener tu patrimonio en estado de ganancia no realizada, menos pagarás al fisco y más rápido crecerá el capital que sigue trabajando para ti."
-        ]
-      },
-      {
-        "title": "Capítulo 6",
-        "content": [
+          "La riqueza invisible es, paradójicamente, la forma más efectiva de acumular riqueza. Cuanto más puedas mantener tu patrimonio en estado de ganancia no realizada, menos pagarás al fisco y más rápido crecerá el capital que sigue trabajando para ti.",
+          {
+            "type": "heading",
+            "content": "Capítulo 6"
+          },
           "La regla de oro: nunca vender",
           "Si tuvieras que quedarte con una sola lección de este libro, sería esta: los ricos nunca venden.",
           "No lo digo de forma metafórica ni hiperbólica. Lo digo en el sentido más literal y técnico del término. Los grandes patrimonios organizan su vida financiera alrededor del principio de no venta. Estructuran sus activos, sus préstamos y su planificación fiscal para minimizar al máximo el número de transacciones imponibles a lo largo de su vida.",
@@ -606,8 +568,12 @@ const BOOK_DATA = [
     "audio": "04_Leccion_III_Pedir_Prestado_La_deuda_es_la_maquina_de_la_riqueza.mp3",
     "chapters": [
       {
-        "title": "LA CONSULTA EN UBS: EL LOMBARD EN CHF",
+        "title": "LECCIÓN III: Pedir Prestado: La deuda es la máquina de la riqueza",
         "content": [
+          {
+            "type": "heading",
+            "content": "LA CONSULTA EN UBS: EL LOMBARD EN CHF"
+          },
           "Dos semanas después, Marcus entraba en la sede de UBS en Paradeplatz, el corazón financiero de Zurich. No era la sucursal para clientes estándar. Había solicitado una cita con “Private Banking” a través de una introducción de Urs, y un gestor joven pero serio llamado Thomas lo estaba esperando en la sala de reuniones del tercer piso.",
           "La sala tenía vistas al lago, pero también a los tranvías que pasaban constantemente por Paradeplatz. Era un recordatorio sutil de que el dinero en Suiza no estaba escondido en grutas montañosas. Estaba en el centro de la ciudad, operando abiertamente, respetando reglas estrictas.",
           "— Señor Hoffmann —dijo Thomas, sin apretón de manos excesivo pero con mirada directa—. Tengo entendido que tiene 1,8 millones de euros que desea invertir, y que está interesado en nuestras facilidades de préstamo con garantía de valores. ¿Correcto?",
@@ -635,12 +601,11 @@ const BOOK_DATA = [
           "Pero esos 450.000 CHF podían comprarle algo más valioso: tiempo.",
           "— Hagámoslo —dijo Marcus—. Pero quiero que el préstamo se use así: 200.000 CHF para adquirir un apartamento pequeño en la región de Zurique como inversión. 250.000 CHF como línea de liquidez para no tener que vender nunca activos de la cartera.",
           "Thomas asintió.",
-          "— Estructura inteligente. La propiedad inmobiliaria suiza es estable, alquilable, y genera ingresos adicionales. Y la línea de liquidez… eso es lo que diferencia a los gestores de patrimonio de los simples ahorradores. ¿Cuándo quiere empezar?"
-        ]
-      },
-      {
-        "title": "EL SECRETO MEJOR GUARDADO: CAPITAL GAINS 0%",
-        "content": [
+          "— Estructura inteligente. La propiedad inmobiliaria suiza es estable, alquilable, y genera ingresos adicionales. Y la línea de liquidez… eso es lo que diferencia a los gestores de patrimonio de los simples ahorradores. ¿Cuándo quiere empezar?",
+          {
+            "type": "heading",
+            "content": "EL SECRETO MEJOR GUARDADO: CAPITAL GAINS 0%"
+          },
           "Un año después, Marcus asistía a su primera declaración de impuestos suiza completa. Había sido un buen año: el mercado había subido un 12%, su cartera valía ahora 2,1 millones de francos equivalentes, y el pequeño apartamento que había comprado en Winterthur estaba alquilado generando 1.200 francos mensuales.",
           "Pero lo más sorprendente llegó cuando el asesor fiscal le presentó los cálculos finales.",
           "— Señor Hoffmann, su cartera ha generado plusvalías no realizadas de aproximadamente 230.000 francos. ¿Ha vendido algo este año?",
@@ -656,12 +621,11 @@ const BOOK_DATA = [
           "— Pero entonces… ¿por qué pide la gente préstamos en lugar de vender?",
           "— Porque vender implica “realizar” la ganancia, aunque no esté gravada. Y una vez realizada, ese dinero deja de trabajar para usted. El préstamo mantiene los activos intactos, creciendo, mientras usted gasta el dinero prestado. Y recuerde: el préstamo reduce su Wealth Tax y genera deducciones fiscales.",
           "Weber cerró la carpeta.",
-          "— En Suiza, señor Hoffmann, el sistema está diseñado para premiar la tenencia de activos y el uso inteligente de la deuda. No es un accidente. Es la filosofía helvética: estabilidad, propiedad privada, y responsabilidad individual. El Estado te deja en paz si generas riqueza de forma estable. Te cobra si la especulación es tu profesión. Es una distinción sutil, pero poderosa."
-        ]
-      },
-      {
-        "title": "EL CICLO COMPLETO: CÓMO MARCUS SE CONVIRTIÓ EN ARQUITECTO",
-        "content": [
+          "— En Suiza, señor Hoffmann, el sistema está diseñado para premiar la tenencia de activos y el uso inteligente de la deuda. No es un accidente. Es la filosofía helvética: estabilidad, propiedad privada, y responsabilidad individual. El Estado te deja en paz si generas riqueza de forma estable. Te cobra si la especulación es tu profesión. Es una distinción sutil, pero poderosa.",
+          {
+            "type": "heading",
+            "content": "EL CICLO COMPLETO: CÓMO MARCUS SE CONVIRTIÓ EN ARQUITECTO"
+          },
           "Tres años después de su llegada a Suiza, Marcus tenía una estructura que habría parecido ciencia ficción en Alemania:",
           {
             "type": "callout",
@@ -673,12 +637,11 @@ const BOOK_DATA = [
           "Cuando su madre enfermó y necesitó 80.000 euros para un tratamiento experimental en Múnich, Marcus no vendió. Amplió ligeramente el Lombard, transfirió los francos a euros, y pagó el tratamiento. Su cartera ni se inmutó.",
           "Cuando el mercado cayó un 15% en 2023 por la crisis bancaria estadounidense, Marcus no perdió el sueño. Su LTV subió del 25% al 29%. Todavía cómodo.",
           "Y cuando su antiguo socio de Múnich le ofreció participar en una startup de software de IA con un ticket de 150.000 euros, Marcus usó el Lombard para financiarlo sin tocar la cartera principal.",
-          "Esa es la ventaja del expatriado en Suiza que entiende el sistema: no es solo pagar menos impuestos. Es tener opcionalidad. Libertad. Capacidad de actuar sin miedo fiscal."
-        ]
-      },
-      {
-        "title": "LA VIDA EN EL LAGO: REFLEXIÓN FINAL",
-        "content": [
+          "Esa es la ventaja del expatriado en Suiza que entiende el sistema: no es solo pagar menos impuestos. Es tener opcionalidad. Libertad. Capacidad de actuar sin miedo fiscal.",
+          {
+            "type": "heading",
+            "content": "LA VIDA EN EL LAGO: REFLEXIÓN FINAL"
+          },
           "Un domingo de verano, Marcus navegaba en su pequeño velero por el lago de Zurich. No era un yate ostentoso. Era un barco de 8 metros que había comprado usado con 35.000 francos del préstamo Lombard. Lo usaba para pensar, para desconectar, para recordar por qué había dejado la carrera armamentística de ingresos de Múnich.",
           "Urs, su gestor de patrimonio, estaba a bordo como invitado ese día. Llevaba una cerveza sin alcohol y observaba las montañas que rodeaban el lago.",
           "— ¿Te arrepientes de algo? —preguntó Urs.",
@@ -694,12 +657,11 @@ const BOOK_DATA = [
           "— Entonces has aprendido el secreto de las montañas de Zurich y Ginebra. No es esconder el dinero. Es usarlo de forma que las montañas te protejan, no te oculten.",
           "Marcus chocó su vaso contra el de Urs.",
           "En la orilla, los bancos de Paradeplatz seguían operando, gestionando billones, prestando contra activos, generando riqueza para quienes entendían las reglas.",
-          "Y Marcus, navegando por el lago, era finalmente uno de ellos."
-        ]
-      },
-      {
-        "title": "EPÍLOGO SUIZO: DATOS PARA EL EXPATRIADO",
-        "content": [
+          "Y Marcus, navegando por el lago, era finalmente uno de ellos.",
+          {
+            "type": "heading",
+            "content": "EPÍLOGO SUIZO: DATOS PARA EL EXPATRIADO"
+          },
           "Si estás considerando una estructura similar a la de Marcus, estos son los datos duros que debes conocer:",
           {
             "type": "callout",
@@ -709,12 +671,11 @@ const BOOK_DATA = [
           },
           "La estructura de Marcus no es evasión fiscal. Es optimización legal basada en las reglas suizas, transparente ante las autoridades españolas (si mantiene vínculos), y completamente estándar en el mundo de la gestión patrimonial internacional.",
           "El secreto no está en el paraíso. Está en entender el sistema y usarlo con inteligencia.",
-          "Como dijo Urs aquel día en el lago: “Las montañas no esconden la riqueza. La protegen de quienes no la entienden.”"
-        ]
-      },
-      {
-        "title": "EPÍLOGO DE LOS CUATRO CASOS",
-        "content": [
+          "Como dijo Urs aquel día en el lago: “Las montañas no esconden la riqueza. La protegen de quienes no la entienden.”",
+          {
+            "type": "heading",
+            "content": "EPÍLOGO DE LOS CUATRO CASOS"
+          },
           "Carlos, Rodrigo, los García, y Marta no son personas reales. Son arquetipos, compuestos de decenas de historias reales que hemos protegido con la ficción necesaria para enseñar sin delatar.",
           "Pero las lecciones son auténticas:",
           "Carlos nos enseña que el primer paso del Juego de la Riqueza no es ganar. Es no perderse a uno mismo en el camino.",
@@ -723,49 +684,44 @@ const BOOK_DATA = [
           "Y Marta prueba que la internacionalización no es evasión. Es arquitectura fiscal legítima, transparente, y tan antigua como el derecho mercantil moderno.",
           "Estas historias no terminan aquí. Siguen evolucionando en la vida real, en los despachos de abogados, en las salas de banca privada, en las aplicaciones de brókers digitales.",
           "El juego continúa.",
-          "Tu turno de elegir qué tipo de jugador quieres ser."
-        ]
-      },
-      {
-        "title": "Capítulo 7",
-        "content": [
+          "Tu turno de elegir qué tipo de jugador quieres ser.",
+          {
+            "type": "heading",
+            "content": "Capítulo 7"
+          },
           "La deuda como herramienta, no como amenaza",
           "La clase media tiene una relación de profunda desconfianza con la deuda. Y hay razones históricas y culturales muy comprensibles para ello. Las hipotecas, las tarjetas de crédito, los préstamos al consumo han arruinado a millones de familias en todo el mundo. La deuda, para la mayoría de las personas, es una trampa.",
           "Pero existe una diferencia fundamental que nadie enseña, y que separa la deuda destructiva de la deuda productiva. La deuda destructiva financia consumo: un coche, unas vacaciones, un televisor. Es deuda que no genera ningún activo y que hay que devolver con intereses desde una nómina que ya está gravada por impuestos.",
-          "La deuda productiva, en cambio, se usa para financiar activos que generan más valor del que cuesta el préstamo. O, en el caso de los grandes patrimonios, para financiar el estilo de vida sin generar ningún ingreso imponible."
-        ]
-      },
-      {
-        "title": "Deuda destructiva vs. deuda productiva",
-        "content": [
+          "La deuda productiva, en cambio, se usa para financiar activos que generan más valor del que cuesta el préstamo. O, en el caso de los grandes patrimonios, para financiar el estilo de vida sin generar ningún ingreso imponible.",
+          {
+            "type": "heading",
+            "content": "Deuda destructiva vs. deuda productiva"
+          },
           "Deuda destructiva: pides 20.000 euros para comprar un coche. El coche pierde valor. Pagas intereses desde tu nómina ya gravada. Resultado: eres más pobre.",
           "Deuda productiva: pides 2 millones de euros usando tu cartera de acciones como aval. Las acciones siguen creciendo. El dinero del préstamo no tributa. Resultado: vives bien y eres más rico.",
-          "El concepto clave que hace posible el segundo movimiento del Juego de la Riqueza es este: un préstamo no es un ingreso. Para el sistema fiscal, un préstamo es una obligación, no una ganancia. El dinero que recibes de un banco como préstamo no aparece en tu declaración de la renta porque tendrás que devolverlo. No tributa. Es, desde la perspectiva fiscal, dinero invisible."
-        ]
-      },
-      {
-        "title": "Capítulo 8",
-        "content": [
+          "El concepto clave que hace posible el segundo movimiento del Juego de la Riqueza es este: un préstamo no es un ingreso. Para el sistema fiscal, un préstamo es una obligación, no una ganancia. El dinero que recibes de un banco como préstamo no aparece en tu declaración de la renta porque tendrás que devolverlo. No tributa. Es, desde la perspectiva fiscal, dinero invisible.",
+          {
+            "type": "heading",
+            "content": "Capítulo 8"
+          },
           "Tu cartera como aval",
           "El mecanismo concreto que utilizan los grandes patrimonios para vivir de deuda sin vender sus activos se llama préstamo con garantía de valores, o en la terminología anglosajona que está empezando a popularizarse, Securities-Based Lending o Lombard Loan.",
           "El funcionamiento es sencillo. Tienes una cartera de inversiones valorada en, digamos, diez millones de euros. Vas a un banco privado o a un bróker especializado y les dices que quieres un préstamo. Ellos no te preguntan cuánto ganas. Te preguntan cuánto posees. Y basándose en el valor de tu cartera, te prestan entre el 50% y el 80% de ese valor, dependiendo del tipo de activos.",
           "En nuestro ejemplo: te prestan cinco millones de euros al 2% de interés anual. Tus activos, mientras tanto, siguen en tu cartera y siguen creciendo al 7% anual. El diferencial entre lo que ganas con tu cartera y lo que pagas de intereses es del 5% anual sobre diez millones, es decir, 500.000 euros anuales que se acumulan en forma de ganancia no realizada.",
           "Con esos cinco millones prestados vives. Compras propiedades. Financias nuevas inversiones. Pagas tus gastos. Y todo ese dinero, desde la perspectiva fiscal, no existe como ingreso.",
           "“El banco no te presta dinero porque lo necesites. Te lo presta porque tienes activos. Aprende esa diferencia y habrás entendido cómo funciona el mundo financiero real.”",
-          "Es importante entender que este mecanismo no está disponible para todos por igual. Los bancos privados suelen exigir patrimonios mínimos significativos para acceder a estos productos en sus mejores condiciones. Pero la lógica subyacente, la de usar activos como garantía de deuda productiva, existe en versiones más accesibles que exploraremos en la quinta parte del libro."
-        ]
-      },
-      {
-        "title": "Capítulo 9",
-        "content": [
+          "Es importante entender que este mecanismo no está disponible para todos por igual. Los bancos privados suelen exigir patrimonios mínimos significativos para acceder a estos productos en sus mejores condiciones. Pero la lógica subyacente, la de usar activos como garantía de deuda productiva, existe en versiones más accesibles que exploraremos en la quinta parte del libro.",
+          {
+            "type": "heading",
+            "content": "Capítulo 9"
+          },
           "El ciclo autosostenible",
           "Visualicémoslo paso a paso. En el año uno, tienes una cartera valorada en diez millones de euros. Pides prestados tres millones al 2% anual. Pagas 60.000 euros de intereses ese año. Tu cartera crece al 7%, generando 700.000 euros de ganancia no realizada. Resultado neto: 640.000 euros más rico. Impuestos pagados sobre todo esto: cero.",
-          "Esto es el ciclo autosostenible. No es una teoría financiera abstracta. Es el mecanismo concreto que utilizan los grandes patrimonios para generar liquidez sin generar renta imponible."
-        ]
-      },
-      {
-        "title": "LA MÁQUINA LOMBARD: CÓMO FUNCIONA EL PRÉSTAMO REAL",
-        "content": [
+          "Esto es el ciclo autosostenible. No es una teoría financiera abstracta. Es el mecanismo concreto que utilizan los grandes patrimonios para generar liquidez sin generar renta imponible.",
+          {
+            "type": "heading",
+            "content": "LA MÁQUINA LOMBARD: CÓMO FUNCIONA EL PRÉSTAMO REAL"
+          },
           "Para entender por qué esto funciona, necesitamos mirar bajo el capó. El préstamo con garantía de valores —conocido técnicamente como Lombard Loan o Securities-Based Lending— es el instrumento financiero que convierte la cartera de Rodrigo en un cajero automático fiscalmente invisible.",
           "El mecanismo funciona así: presentas tus activos como colateral. El banco te presta dinero contra ese colateral. Pero aquí está la clave que nadie te explica: el banco no quiere que vendas tus acciones. De hecho, el banco necesita que sigas siendo rico para que puedas seguir pagando sus intereses.",
           "Vamos a los números reales. Imagina que Rodrigo tiene una cartera diversificada de 12 millones de euros compuesta por:",
@@ -791,24 +747,22 @@ const BOOK_DATA = [
           },
           "Total gastado: 4 millones. Total pagado en impuestos por recibir esos 4 millones: cero.",
           "¿Por qué? Porque un préstamo no es ingreso. Es una obligación de devolución. El sistema fiscal español, como la mayoría de los sistemas occidentales, no grava los préstamos personales. No hay hecho imponible. No hay venta. No hay realización de ganancia.",
-          "“El dinero que recibes de un préstamo es el único capital del mundo que no paga impuestos en el momento de recibirlo. Y los ricos lo saben.”"
-        ]
-      },
-      {
-        "title": "LA MATEMÁTICA DEL DIFERENCIAL: 7% VS 2,8%",
-        "content": [
+          "“El dinero que recibes de un préstamo es el único capital del mundo que no paga impuestos en el momento de recibirlo. Y los ricos lo saben.”",
+          {
+            "type": "heading",
+            "content": "LA MATEMÁTICA DEL DIFERENCIAL: 7% VS 2,8%"
+          },
           "Aquí es donde la estrategia se vuelve matemáticamente imparable. Rodrigo paga 2,8% de interés sobre sus 4 millones prestados. Eso son 112.000 euros al año. Pero sus 12 millones en cartera, si crecen al 7% anual histórico de los mercados, generan 840.000 euros de ganancia no realizada.",
           "Resultado neto anual: 728.000 euros más rico.",
           "Impuestos pagados: cero.",
           "Ese diferencial de 4,2 puntos porcentuales (7% — 2,8%) es el motor del ciclo. Mientras el diferencial sea positivo —y durante las últimas dos décadas lo ha sido abrumadoramente— la estrategia es autosostenible. Rodrigo no necesita trabajar. No necesita vender. Solo necesita que su cartera crezca más rápido de lo que cuesta su deuda.",
           "Pero aquí viene la segunda capa de la estrategia que la mayoría no ve.",
           "Rodrigo no está pagando los 112.000 euros de intereses desde una nómina gravada. No tiene nómina. ¿De dónde saca el dinero para pagar los intereses? De la propia línea de crédito.",
-          "El ciclo se alimenta a sí mismo. Mientras el valor de los activos suba más rápido que el coste de la deuda, la máquina sigue funcionando."
-        ]
-      },
-      {
-        "title": "POR QUÉ EL BANCO PREFIERE A RODRIGO ANTES QUE A CARLOS",
-        "content": [
+          "El ciclo se alimenta a sí mismo. Mientras el valor de los activos suba más rápido que el coste de la deuda, la máquina sigue funcionando.",
+          {
+            "type": "heading",
+            "content": "POR QUÉ EL BANCO PREFIERE A RODRIGO ANTES QUE A CARLOS"
+          },
           "Carlos, nuestro empleado de logística con 38.000 euros al año, también podría pedir un préstamo personal al banco. Su banco le ofrecería:",
           {
             "type": "callout",
@@ -823,7 +777,10 @@ const BOOK_DATA = [
               "— Tipo de interés: 2,8% (Euribor + 1,5%) — Cantidad disponible: hasta 8,4 millones de euros — Plazo: renovable anualmente, indefinido — Requisitos: tener activos. Solo eso."
             ]
           },
-          "¿Por qué el banco prefiere a Rodrigo? ¿Por qué le da mejores condiciones que al trabajador estable con contrato indefinido?",
+          {
+            "type": "heading",
+            "content": "¿Por qué el banco prefiere a Rodrigo? ¿Por qué le da mejores condiciones que al trabajador estable con contrato indefinido?"
+          },
           "La respuesta es que el banco no está prestando a Rodrigo. Está prestando contra Rodrigo. Es decir, contra su colateral. El banco sabe que si Rodrigo no paga, tiene 12 millones en activos que puede ejecutar. No hay riesgo de impago real porque el préstamo está sobregarantizado.",
           "El banco, además, no quiere que Rodrigo devuelva el préstamo. Quiere que lo renueve cada año. Porque cada renovación genera comisiones. Porque cada año que Rodrigo sigue siendo cliente, el banco cobra intereses. Porque un cliente con 12 millones en custodia genera ingresos por gestión, por productos vinculados, por estructuración patrimonial.",
           "Rodrigo es un cliente de vida. Carlos es un cliente de transacción.",
@@ -836,24 +793,22 @@ const BOOK_DATA = [
             ]
           },
           "Cuanto más estable el activo, más alto el LTV. Cuanto más volátil, más conservador el banco. Rodrigo, con su cartera diversificada en índices globales, obtiene los mejores LTVs. Un day-trader con acciones especulativas obtendría condiciones mucho peores.",
-          "El mensaje es claro: el sistema financiero premia la estabilidad patrimonial y castiga la especulación sin base. Pero lo que nunca te dicen es que también castiga severamente la ausencia de patrimonio."
-        ]
-      },
-      {
-        "title": "EL MARGIN CALL: EL RIESGO REAL",
-        "content": [
+          "El mensaje es claro: el sistema financiero premia la estabilidad patrimonial y castiga la especulación sin base. Pero lo que nunca te dicen es que también castiga severamente la ausencia de patrimonio.",
+          {
+            "type": "heading",
+            "content": "EL MARGIN CALL: EL RIESGO REAL"
+          },
           "Todo esto suena demasiado bueno para ser verdad. Y como toda estrategia financiera, tiene riesgos. El riesgo principal en un Lombard Loan es el margin call.",
           "Si el mercado se desploma y la cartera de Rodrigo cae del valor que garantiza el préstamo, el LTV sube. Si Rodrigo pidió prestado 8,4 millones (70% de 12 millones) y su cartera cae a 9 millones, su LTV sube al 93%. El banco entra en pánico.",
           "El margin call funciona así: el banco exige que Rodrigo reponga el colateral (aportando más activos o dinero) o devuelva parte del préstamo para bajar el LTV. Si Rodrigo no puede hacerlo en 24-72 horas, el banco ejecuta. Vende los activos de Rodrigo, paga el préstamo, y devuelve lo que queda.",
           "El problema no es solo la pérdida de los activos. Es que esa venta forzosa genera un hecho imponible. Las ganancias no realizadas se vuelven realizadas. Rodrigo, tras años de pagar cero impuestos, de repente tiene una factura fiscal masiva por las plusvalías generadas durante décadas.",
           "Por eso los grandes patrimonios son conservadores con sus LTVs. Nunca se acercan al límite del 70-80%. Operan con márgenes de seguridad del 50% o menos. Prefieren pagar intereses sobre 3 millones en lugar de maximizar a 8 millones, porque eso les da un colchón contra el margin call.",
           "El ciclo autosostenible solo funciona si sobrevives a los ciclos de mercado. Y los ciclos de mercado incluyen caídas del 30-50% cada década. Si tu LTV es del 20% cuando llega la crisis, puedes dormir tranquilo. Si es del 70%, estás a un mes de perder todo.",
-          "“La deuda productiva es el acelerador de la riqueza. Pero como todo acelerador, si lo usas sin cinturón de seguridad, acabarás estrellado.”"
-        ]
-      },
-      {
-        "title": "LA ESCALERA DE LOS TIPOS: CUÁNDO LA ESTRATEGIA DEJA DE FUNCIONAR",
-        "content": [
+          "“La deuda productiva es el acelerador de la riqueza. Pero como todo acelerador, si lo usas sin cinturón de seguridad, acabarás estrellado.”",
+          {
+            "type": "heading",
+            "content": "LA ESCALERA DE LOS TIPOS: CUÁNDO LA ESTRATEGIA DEJA DE FUNCIONAR"
+          },
           "Hay un escenario donde todo esto deja de tener sentido matemático: cuando los tipos de interés superan el rendimiento esperado de los activos.",
           "Si los tipos de interés suben al 8% (como ocurrió en 2022-2023 en muchas economías) y tu cartera solo rinde el 5%, el diferencial se invierte. Ahora la deuda te empobrece en lugar de enriquecerte.",
           "Los grandes patrimonios lo saben. Por eso en entornos de tipos altos:",
@@ -862,24 +817,22 @@ const BOOK_DATA = [
           "Pivotan a activos que benefician de tipos altos (bonos, fondos de dinero)",
           "Esperan. Porque los tipos altos suelen ser temporales",
           "La estrategia del ciclo autosostenible no es inmune a los ciclos económicos. Es inmune a los impuestos, no a la realidad financiera. Cuando el coste del dinero supera el retorno de los activos, el juego cambia.",
-          "El patrimonio es opcionalidad. La deuda, usada correctamente, es opcionalidad amplificada."
-        ]
-      },
-      {
-        "title": "LA ÚLTIMA PIEZA: POR QUÉ ESTO ES LEGAL Y LO SEGUIRÁ SIENDO",
-        "content": [
+          "El patrimonio es opcionalidad. La deuda, usada correctamente, es opcionalidad amplificada.",
+          {
+            "type": "heading",
+            "content": "LA ÚLTIMA PIEZA: POR QUÉ ESTO ES LEGAL Y LO SEGUIRÁ SIENDO"
+          },
           "A estas alturas, algunos lectores estarán indignados. ¿Cómo es posible que esto sea legal? ¿Por qué no cierra el gobierno este “agujero fiscal”?",
           "La respuesta es simple y políticamente incómoda: porque gravar los préstamos personales sería devastador para la economía real.",
           "Un préstamo no es ingreso porque es una obligación de devolución. Si el Estado gravara los préstamos, estaría gravando deuda. Imagina que por pedir una hipoteca de 200.000 euros para comprar tu casa, tuvieras que pagar 60.000 euros de impuestos. El mercado inmobiliario colapsaría. La economía se paralizaría.",
           "El segundo motivo es más pragmático: los grandes patrimonios tienen voz en la legislación. No es conspiración. Es simple realidad de lobby y presión política. Las normas fiscales que permiten esta estructura existen porque quienes las usarían más eficazmente tienen capacidad de influir en su diseño.",
           "Pero aquí está la revelación final: no necesitas ser Rodrigo para empezar a usar esto. Necesitas entender el mecanismo. Comenzar pequeño. Construir tu colateral. Acceder a líneas de crédito garantizadas. Y dejar que el tiempo y el interés compuesto hagan el resto.",
           "El ciclo autosostenible no es exclusivo de los multimillonarios. Es exclusivo de quienes entienden las reglas. Y ahora, tú las conoces.",
-          "El resto, como dicen, es solo matemática."
-        ]
-      },
-      {
-        "title": "Capítulo 10",
-        "content": [
+          "El resto, como dicen, es solo matemática.",
+          {
+            "type": "heading",
+            "content": "Capítulo 10"
+          },
           "Lo que los bancos saben y tú no",
           "Los bancos privados, esas entidades con oficinas discretas y recepcionistas que nunca parecen tener prisa, saben perfectamente lo que están haciendo cuando prestan dinero a quienes ya son ricos.",
           "Su razonamiento es simple y elegante: si tu cliente tiene diez millones en acciones de empresas sólidas y te pide tres millones prestados, el riesgo para el banco es prácticamente nulo. Si el cliente no puede pagar, el banco ejecuta la garantía y vende parte de la cartera. No hay riesgo de impago real mientras el valor de los activos supere el valor del préstamo.",
@@ -897,22 +850,24 @@ const BOOK_DATA = [
     "audio": "05_Leccion_IV_Morir_El_ultimo_truco_fiscal_y_el_legado_familiar.mp3",
     "chapters": [
       {
-        "title": "Introducción",
+        "title": "LECCIÓN IV: Morir: El último truco fiscal y el legado familiar",
         "content": [
-          "El último privilegio fiscal"
-        ]
-      },
-      {
-        "title": "Capítulo 11",
-        "content": [
+          "El último privilegio fiscal",
+          {
+            "type": "heading",
+            "content": "Capítulo 11"
+          },
           "Si los dos primeros movimientos del Juego de la Riqueza son poderosos, el tercero es directamente extraordinario. Porque resuelve el único problema aparente de la estrategia: ¿qué pasa con todas esas plusvalías latentes acumuladas a lo largo de décadas cuando el titular de los activos muere?",
           "La respuesta, al menos en el sistema fiscal americano donde esta regla es especialmente poderosa, es que desaparecen. Se evaporan. Décadas de ganancias no realizadas quedan completamente exentas de impuestos sobre las plusvalías gracias a un mecanismo llamado step-up in basis, que podríamos traducir como ajuste o actualización de la base imponible.",
-          "El funcionamiento es el siguiente. Cuando alguien muere y sus herederos reciben un activo, la base imponible de ese activo, es decir, el valor desde el que se calcularán las futuras plusvalías, se actualiza al precio de mercado en el momento del fallecimiento."
-        ]
-      },
-      {
-        "title": "LA MAGIA DEL RESET: CÓMO EL STEP-UP ELIMINA DÉCADAS DE IMPUESTOS",
-        "content": [
+          "El funcionamiento es el siguiente. Cuando alguien muere y sus herederos reciben un activo, la base imponible de ese activo, es decir, el valor desde el que se calcularán las futuras plusvalías, se actualiza al precio de mercado en el momento del fallecimiento.",
+          {
+            "type": "heading",
+            "content": "Ejemplo del step-up in basis"
+          },
+          {
+            "type": "heading",
+            "content": "LA MAGIA DEL RESET: CÓMO EL STEP-UP ELIMINA DÉCADAS DE IMPUESTOS"
+          },
           "El step-up in basis no es un simple ajuste administrativo. Es la culminación matemática del Juego de la Riqueza. Para entender su poder, necesitamos ver los números brutos que implica.",
           "Imagina que Rodrigo, a los 30 años, heredó de su padre una cartera de 2 millones de euros. Durante 40 años, aplicando estrictamente la estrategia de comprar y pedir prestado, su cartera creció sin vender ni un solo euro de ganancia:",
           {
@@ -922,12 +877,11 @@ const BOOK_DATA = [
             ]
           },
           "La ganancia latente acumulada: 27.900.000 €. En España, tributar por eso en vida habría supuesto entre 5 y 7 millones de euros en impuestos por plusvalías.",
-          "“El step-up no evade impuestos. Los elimina retroactivamente. Es la diferencia entre no pagar y que la deuda nunca existiera.”"
-        ]
-      },
-      {
-        "title": "RODRIGO VS CARLOS: LA HERENCIA QUE NO ES IGUAL",
-        "content": [
+          "“El step-up no evade impuestos. Los elimina retroactivamente. Es la diferencia entre no pagar y que la deuda nunca existiera.”",
+          {
+            "type": "heading",
+            "content": "RODRIGO VS CARLOS: LA HERENCIA QUE NO ES IGUAL"
+          },
           "Aquí está el contraste brutal que el sistema oculta. Comparemos qué le dejan dos padres a sus hijos.",
           {
             "type": "callout",
@@ -950,12 +904,11 @@ const BOOK_DATA = [
             ]
           },
           "Los hijos de Rodrigo heredan 25.400.000 € de patrimonio neto con cero impuestos por plusvalías históricas. Esa es la diferencia entre el Juego de los Ingresos y el Juego de la Riqueza: no solo cuánto acumulas, sino qué parte de eso el Estado puede tocar.",
-          "“Carlos hereda lo que quedó después de que el sistema tocara su parte. Los hijos de Rodrigo heredan el tablero completo, con las piezas intactas.”"
-        ]
-      },
-      {
-        "title": "INGENIERÍA DE SUCESIONES: LA DEUDA QUE SE PAGA SOLA",
-        "content": [
+          "“Carlos hereda lo que quedó después de que el sistema tocara su parte. Los hijos de Rodrigo heredan el tablero completo, con las piezas intactas.”",
+          {
+            "type": "heading",
+            "content": "INGENIERÍA DE SUCESIONES: LA DEUDA QUE SE PAGA SOLA"
+          },
           "Aquí es donde la estrategia alcanza su máxima elegancia. La deuda que Rodrigo acumuló durante su vida —esos 8 millones de préstamo Lombard— no es una carga para sus herederos. Es una herramienta de optimización fiscal.",
           "El mecanismo funciona así:",
           "Cuando Rodrigo muere, sus herederos reciben los activos con step-up in basis. Eso significa que la cartera de 29.900.000 € ahora tiene una base fiscal de 29.900.000 €. Cero plusvalías latentes.",
@@ -971,12 +924,11 @@ const BOOK_DATA = [
             ]
           },
           "En 20 años, esa cartera habrá crecido a 115.000.000 €. La deuda sigue siendo de ~8 millones (o lo que hayan ido refinanciando para gastos). El patrimonio neto familiar ha multiplicado por 4.5x sin pagar un euro de impuestos sobre plusvalías.",
-          "La deuda del padre se convirtió en el acelerador del hijo. Sin vender ni un activo heredado. Sin realizar ganancias. Sin generar hechos imponibles."
-        ]
-      },
-      {
-        "title": "LA BASE IMPONIBLE PARALELO: ESPAÑA VS ESTADOS UNIDOS",
-        "content": [
+          "La deuda del padre se convirtió en el acelerador del hijo. Sin vender ni un activo heredado. Sin realizar ganancias. Sin generar hechos imponibles.",
+          {
+            "type": "heading",
+            "content": "LA BASE IMPONIBLE PARALELO: ESPAÑA VS ESTADOS UNIDOS"
+          },
           "Es crucial entender que el step-up in basis no funciona igual en todas partes. Y esto explica por qué los grandes patrimonios estructuran sus residencias fiscales con tanta precisión.",
           {
             "type": "callout",
@@ -993,12 +945,11 @@ const BOOK_DATA = [
           "El sistema, en otras palabras, apuesta a que los ricos seguirán siendo ricos. Que no venderán. Que perpetuarán el juego. Y que, al final, el Estado cobrará por el crecimiento futuro, no por el pasado.",
           "Pero los datos demuestran que ese “cobro futuro” nunca llega. Los herederos de grandes patrimonios: 1. No venden (sigue la regla de no-venta) 2. Refinancian la deuda del padre (seguir el ciclo autosostenible) 3. Acumulan más deuda propia (la riqueza crece, la deuda crece con ella) 4. Transmiten a sus hijos con otro step-up (el ciclo se reinicia)",
           "La plusvalía fiscalmente “perdonada” nunca se cobra. Se acumula generación tras generación, creciendo exponencialmente, mientras el Estado cobra migajas de Sucesiones sobre el valor nominal del patrimonio, no sobre la ganancia real acumulada.",
-          "“La verdadera herencia no es el dinero. Es la estructura que permite que el dinero nunca sea gravado como correspondería.”"
-        ]
-      },
-      {
-        "title": "EL CIERRE DEL CÍRCULO: CÓMO NACE UNA DINASTÍA",
-        "content": [
+          "“La verdadera herencia no es el dinero. Es la estructura que permite que el dinero nunca sea gravado como correspondería.”",
+          {
+            "type": "heading",
+            "content": "EL CIERRE DEL CÍRCULO: CÓMO NACE UNA DINASTÍA"
+          },
           {
             "type": "callout",
             "content": [
@@ -1011,34 +962,31 @@ const BOOK_DATA = [
           "Esto no es evasión fiscal. Es estructura. Es entender que el sistema fiscal está diseñado para gravar transacciones, no acumulaciones. Para gravar trabajo, no propiedad. Para gravar ventas, no tenencia.",
           "Y eso es exactamente lo que el Juego de la Riqueza explota. No un agujero legal. La propia arquitectura del sistema.",
           "“Las dinastías no nacen de la suerte. Nacen de la comprensión de que la muerte, fiscalmente hablando, es la mejor herramienta de planificación patrimonial que existe.”",
-          "El resto, como siempre, es solo matemática."
-        ]
-      },
-      {
-        "title": "Capítulo 12",
-        "content": [
+          "El resto, como siempre, es solo matemática.",
+          {
+            "type": "heading",
+            "content": "Capítulo 12"
+          },
           "La herencia limpia",
           "Conviene entender qué significa concretamente recibir una herencia limpia de plusvalías históricas.",
           "Imaginemos que un inversor construye a lo largo de su vida una cartera de acciones e inmuebles valorada en 50 millones de euros. La mayor parte de ese valor, digamos 45 millones, son plusvalías latentes acumuladas durante décadas de inversión inteligente y paciencia. El coste original de los activos fue de apenas 5 millones.",
           "Si ese inversor vendiera todo en vida y tributara por las plusvalías en España, pagaría aproximadamente entre el 19% y el 28% sobre los 45 millones de ganancia, dependiendo del importe y la estructura. Estamos hablando de entre 8 y 12 millones de euros en impuestos.",
           "Con el mecanismo de actualización de la base imponible en el fallecimiento, sus herederos reciben los 50 millones íntegros. La base imponible de cada activo se resetea al valor de mercado actual. Si los herederos venden al día siguiente, pagan impuestos sobre cero euros de plusvalía.",
           "El ahorro fiscal intergeneracional puede alcanzar decenas de millones de euros en un solo patrimonio familiar. Multiplicado por los miles de grandes patrimonios que operan de esta manera, el impacto en la distribución de la riqueza es estructural y acumulativo.",
-          "“La herencia no es solo dinero. Es también el juego en el que entras al recibirla. Y quienes heredan activos limpios empiezan ya dentro del Juego de la Riqueza.”"
-        ]
-      },
-      {
-        "title": "Capítulo 13",
-        "content": [
+          "“La herencia no es solo dinero. Es también el juego en el que entras al recibirla. Y quienes heredan activos limpios empiezan ya dentro del Juego de la Riqueza.”",
+          {
+            "type": "heading",
+            "content": "Capítulo 13"
+          },
           "El diseño no es accidental",
           "Llegados a este punto, una pregunta resulta inevitable: ¿es todo esto un accidente? ¿Son estas reglas fiscales el resultado de descuidos, olvidos o errores técnicos de los legisladores? ¿O hay algo más sistemático detrás?",
           "La respuesta honesta es que las reglas del Juego de la Riqueza no son accidentes. Son el resultado de décadas de influencia política, lobbying sofisticado y captura regulatoria por parte de los intereses que más se benefician de su existencia.",
           "Esto no equivale a una teoría conspirativa. No hace falta postular ninguna reunión secreta de millonarios diseñando el sistema. Basta con entender cómo funciona la política fiscal en la práctica: quienes tienen recursos contratan a los mejores abogados tributarios, economistas y lobistas para asegurarse de que las reglas que se escriben en el Parlamento sean favorables para sus intereses.",
-          "El resultado, observado desde fuera, parece deliberado porque, en cierta medida, lo es. No como conspiración, sino como consecuencia acumulada de innumerables decisiones incrementales tomadas por actores que siempre tienen claro qué les conviene."
-        ]
-      },
-      {
-        "title": "La pregunta que incomoda",
-        "content": [
+          "El resultado, observado desde fuera, parece deliberado porque, en cierta medida, lo es. No como conspiración, sino como consecuencia acumulada de innumerables decisiones incrementales tomadas por actores que siempre tienen claro qué les conviene.",
+          {
+            "type": "heading",
+            "content": "La pregunta que incomoda"
+          },
           "Si el sistema fiscal grava más el trabajo que el capital, más el esfuerzo que la herencia, más la transacción que la tenencia… ¿a quién le conviene que las cosas sigan así? La respuesta a esa pregunta explica por qué estas reglas existen y por qué es tan difícil cambiarlas.",
           "Entender esto no tiene que llevarnos a la parálisis ni al cinismo. Tiene que llevarnos a una decisión: o jugamos al juego que ya conocemos, o aprendemos las reglas del juego que ha funcionado para los que más han acumulado. En la siguiente parte, exploraremos cómo aplicar estas estrategias en distintos niveles de patrimonio."
         ]
@@ -1051,25 +999,23 @@ const BOOK_DATA = [
     "audio": "06_Leccion_V_Redisena_tu_tablero.mp3",
     "chapters": [
       {
-        "title": "Introducción",
+        "title": "LECCIÓN V: Rediseña tu tablero",
         "content": [
-          "Cómo cambiar de juego"
-        ]
-      },
-      {
-        "title": "Capítulo 14",
-        "content": [
+          "Cómo cambiar de juego",
+          {
+            "type": "heading",
+            "content": "Capítulo 14"
+          },
           "Hojas de ruta: ¿Por dónde empiezo yo?",
           "La pregunta más frecuente que recibo después de explicar la estrategia de comprar, pedir prestado y morir es siempre la misma: «Todo eso está muy bien para los multimillonarios. ¿Pero qué hago yo con mis 20.000 euros de ahorro?»",
           "Es una pregunta legítima y merece una respuesta honesta. No, con 20.000 euros no puedes replicar exactamente la estrategia de un gran patrimonio familiar. Los préstamos con garantía de valores en las mejores condiciones requieren carteras significativas. El acceso a banca privada tiene umbrales de entrada elevados.",
           "Pero la lógica subyacente de la estrategia —comprar activos que crecen, minimizar las transacciones imponibles y usar el apalancamiento de forma inteligente— sí es aplicable en versiones adaptadas a cada nivel de patrimonio.",
           "El error más común es querer saltar etapas. El Superviviente que intenta jugar como Arquitecto se estrella. El Arquitecto que olvida que fue Superviviente pierde perspectiva. Cada fase tiene sus herramientas, sus bancos, sus preguntas clave y sus errores fatales.",
-          "A continuación, los tres caminos."
-        ]
-      },
-      {
-        "title": "EL SUPERVIVIENTE: DE 0 A 50.000 EUROS",
-        "content": [
+          "A continuación, los tres caminos.",
+          {
+            "type": "heading",
+            "content": "EL SUPERVIVIENTE: DE 0 A 50.000 EUROS"
+          },
           "El objetivo en esta fase no es enriquecerte. Es sobrevivir al sistema lo suficiente para llegar a la siguiente fase con las herramientas intactas.",
           "Aquí no hay banca privada. No hay Lombard Loans. No hay estructuras societarias internacionales. Hay un solo mandamiento: acumula sin que el sistema te desangre antes de tiempo.",
           "— Fondo de emergencia primero",
@@ -1113,12 +1059,11 @@ const BOOK_DATA = [
           "Vender para “tomar beneficios”. En esta fase, todavía no hay beneficios. Hay supervivencia. Vender un fondo que ha subido un 15% para “asegurar” es autolesión fiscal.",
           "Comprar acciones individuales. No tienes información, ni tiempo, ni capital para diversificar correctamente. Un solo enfermo en tu cartera de 15.000€ te destruye el plan.",
           "Ignorar la fiscalidad. El Superviviente que compra fondos de distribución y declara dividendos cada año está financiando el sistema en lugar de financiarse a sí mismo.",
-          "“El Superviviente no juega para ganar. Juega para no perder, y seguir jugando.”"
-        ]
-      },
-      {
-        "title": "EL ASPIRANTE: DE 50.000 A 500.000 EUROS",
-        "content": [
+          "“El Superviviente no juega para ganar. Juega para no perder, y seguir jugando.”",
+          {
+            "type": "heading",
+            "content": "EL ASPIRANTE: DE 50.000 A 500.000 EUROS"
+          },
           "Aquí empiezas a oler el Juego de la Riqueza. No estás dentro todavía, pero puedes ver la puerta. La estrategia cambia: ya no basta con acumular. Hay que empezar a optimizar el coste del dinero y explorar el apalancamiento suave.",
           "— El salto cualitativo: de la nómina a la propiedad",
           "Con 50.000€ en fondos, empiezas a tener opciones. Pero el paso más importante es psicológico: dejar de pensar en ahorro y empezar a pensar en patrimonio.",
@@ -1173,12 +1118,11 @@ const BOOK_DATA = [
           "Mezclar patrimonio personal con inversión inmobiliaria. Nunca vivas en el inmueble que compraste para alquilar. Pierde el carácter de inversión y se convierte en hogar emocional.",
           "Ignorar los costes de transmisión. Comprar y vender inmuebles tiene costes del 10-15% entre ITP, notaría, registro, plusvalía municipal y gastos de agencia. El Aspirante que “prueba” con un inmuebre y lo vende al año, pierde.",
           "Pedir préstamo con garantía de cartera para gastos de consumo. Esta es la trampa mortal. El préstamo debe financiar activos, no cenas.",
-          "“El Aspirante no está dentro del Juego de la Riqueza todavía. Pero ha dejado de ser presa fácil del Juego de los Ingresos.”"
-        ]
-      },
-      {
-        "title": "EL ARQUITECTO: MÁS DE 500.000 EUROS",
-        "content": [
+          "“El Aspirante no está dentro del Juego de la Riqueza todavía. Pero ha dejado de ser presa fácil del Juego de los Ingresos.”",
+          {
+            "type": "heading",
+            "content": "EL ARQUITECTO: MÁS DE 500.000 EUROS"
+          },
           "Aquí cruzas el umbral. La banca privada te abre la puerta. Los préstamos Lombard pasan de ser teoría a ser herramienta. La planificación fiscal ya no es anual, es vitalicia y sucesoria.",
           "Pero cuidado: el Arquitecto que entra en la sala VIP sin saber qué preguntar, es un niño en una juguetería con tarjeta de crédito. Los bancos privados no son filántropos. Son máquinas de comisiones disfrazadas de elegancia.",
           "— El salto a banca privada: cuándo y cómo",
@@ -1233,12 +1177,11 @@ const BOOK_DATA = [
           "— Errores mortales del Arquitecto",
           "Creer que la banca privada es tu amiga. No lo es. Es un proveedor de servicios que cobra 1-1,5% anual sobre tu patrimonio. Eso son 15.000€ al año sobre un millón. Cada década, 150.000€. Pregúntate: «¿Están añadiendo ese valor realmente?»",
           "Complejidad por complejidad. Cada estructura añadida (trust, sociedad, fondo luxemburgués) tiene costes de mantenimiento. Si tu patrimonio no ha superado los 3 millones, muchas de estas estructuras se comen en costes lo que ahorran en impuestos.",
-          "Olvidar la regla de oro. El Arquitecto tiene acceso a apalancamiento real. La tentación de pedir 600.000€ sobre un millón (LTV 60%) es grande. Pero el margin call en una caída del 40% del mercado te liquida. El Arquitecto conservador nunca supera el 40% de LTV. Nunca."
-        ]
-      },
-      {
-        "title": "LA PRIMERA PREGUNTA PARA TU GESTOR (Y CÓMO interpretar su respuesta)",
-        "content": [
+          "Olvidar la regla de oro. El Arquitecto tiene acceso a apalancamiento real. La tentación de pedir 600.000€ sobre un millón (LTV 60%) es grande. Pero el margin call en una caída del 40% del mercado te liquida. El Arquitecto conservador nunca supera el 40% de LTV. Nunca.",
+          {
+            "type": "heading",
+            "content": "LA PRIMERA PREGUNTA PARA TU GESTOR (Y CÓMO interpretar su respuesta)"
+          },
           "Independientemente de tu perfil, hay una pregunta que debes hacerle a cualquier gestor o asesor con el que trabajes:",
           "«Si tuvieras mi mismo patrimonio y mi misma situación personal, ¿qué harías tú con tu dinero?»",
           "Escucha con atención. Después haz la pregunta de seguimiento:",
@@ -1246,40 +1189,36 @@ const BOOK_DATA = [
           "Si la respuesta a la segunda pregunta es “ninguno” o “tendríamos que estructurar algo especial”, está admitiendo que su banco no tiene lo que necesitas. Está intentando venderte lo que tiene, no lo que necesitas.",
           "El buen asesor dirá: «Si fuera tú, tendría X% en este fondo de acumulación irlandés, Y% en este otro, y Z% en liquidez. Y sí, lo gestionamos nosotros.»",
           "El mal asesor dirá: «Dependerá de tu perfil de riesgo, tenemos un cuestionario…»",
-          "El perfil de riesgo es el opio de los bancos. Te clasifican para venderte productos predefinidos. Tu objetivo no es encajar en su clasificación. Tu objetivo es que su clasificación se adapte a tu estrategia."
-        ]
-      },
-      {
-        "title": "CHECKLIST DE TRANSICIÓN ENTRE PERFILES",
-        "content": [
+          "El perfil de riesgo es el opio de los bancos. Te clasifican para venderte productos predefinidos. Tu objetivo no es encajar en su clasificación. Tu objetivo es que su clasificación se adapte a tu estrategia.",
+          {
+            "type": "heading",
+            "content": "CHECKLIST DE TRANSICIÓN ENTRE PERFILES"
+          },
           "De Superviviente a Aspirante (cuando cruzas 50.000€): [ ] He abierto una cuenta en Interactive Brokers o equivalente [ ] Mis fondos son de acumulación y domiciliados en Irlanda [ ] Tengo un colchón de liquidez de 6 meses fuera de la cartera de inversión [ ] He entendido la diferencia entre un dividendo y una plusvalía no realizada",
           "De Aspirante a Arquitecto (cuando cruzas 500.000€): [ ] He solicitado información de al menos tres bancos privados [ ] Sé el LTV que me ofrecen sobre mi cartera actual [ ] Tengo una estructura fiscal clara para los próximos 5 años [ ] He entrevistado a un abogado fiscal internacional (aunque no lo contrate todavía)",
           "No necesitas ser millonario para empezar a pensar como uno. Necesitas empezar a pensar como uno para tener posibilidades de llegar a serlo.",
           "El Superviviente que sobrevive, se convierte en Aspirante. El Aspirante que optimiza, se convierte en Arquitecto. El Arquitecto que estructura, construye la dinastía.",
           "Comprar. Pedir prestado. Morir.",
-          "El resto son solo escalones."
-        ]
-      },
-      {
-        "title": "Capítulo 15",
-        "content": [
+          "El resto son solo escalones.",
+          {
+            "type": "heading",
+            "content": "Capítulo 15"
+          },
           "El debate moral",
           "Sería deshonesto cerrar este libro sin abordar la pregunta que muchos lectores llevan formulando desde las primeras páginas: ¿es todo esto ético?",
           "Existen dos posiciones bien articuladas y legítimas en este debate, y me parece importante presentarlas con honestidad antes de ofrecer mi propia perspectiva.",
           "La primera posición sostiene que estas estrategias son perfectamente éticas porque son completamente legales. Cada ciudadano tiene el derecho, e incluso el deber para con su familia, de organizar sus asuntos fiscales de la manera más eficiente que permita la ley. No hay engaño, no hay fraude, no hay ocultación. Todo es transparente y legal. Si el sistema permite diferir o minimizar ciertos impuestos, usarlo no es un delito moral; es sentido común.",
-          "La segunda posición sostiene que legalidad y ética no son sinónimos. Que un sistema que permite a los que más tienen pagar menos porcentualmente que los que trabajan por un sueldo es estructuralmente injusto, independientemente de su legalidad. Que los grandes patrimonios se benefician de infraestructuras, sistemas judiciales, mercados regulados y estabilidad social que son financiados principalmente por quienes no tienen acceso a estas estrategias."
-        ]
-      },
-      {
-        "title": "La pregunta que cada lector debe responder",
-        "content": [
+          "La segunda posición sostiene que legalidad y ética no son sinónimos. Que un sistema que permite a los que más tienen pagar menos porcentualmente que los que trabajan por un sueldo es estructuralmente injusto, independientemente de su legalidad. Que los grandes patrimonios se benefician de infraestructuras, sistemas judiciales, mercados regulados y estabilidad social que son financiados principalmente por quienes no tienen acceso a estas estrategias.",
+          {
+            "type": "heading",
+            "content": "La pregunta que cada lector debe responder"
+          },
           "¿Usarías estas estrategias si pudieras? ¿Cambiaría tu respuesta si supieras que hacerlo contribuye a ampliar la brecha de riqueza? ¿O crees que la responsabilidad de diseñar un sistema más justo recae en los legisladores y no en los individuos que optimizan dentro de las reglas existentes? No hay respuesta correcta universal. Pero es una pregunta que vale la pena hacerse.",
-          "Mi posición personal es que ambas perspectivas contienen verdades importantes. Es racional y legítimo optimizar dentro de las reglas existentes. Y es igualmente necesario cuestionar si esas reglas deberían cambiar. Ambas cosas pueden ser ciertas a la vez, y defenderlas simultáneamente no es contradicción sino coherencia."
-        ]
-      },
-      {
-        "title": "Capítulo 16",
-        "content": [
+          "Mi posición personal es que ambas perspectivas contienen verdades importantes. Es racional y legítimo optimizar dentro de las reglas existentes. Y es igualmente necesario cuestionar si esas reglas deberían cambiar. Ambas cosas pueden ser ciertas a la vez, y defenderlas simultáneamente no es contradicción sino coherencia.",
+          {
+            "type": "heading",
+            "content": "Capítulo 16"
+          },
           "Rediseña tu tablero",
           "Hemos llegado al final del recorrido. Y el final de todo libro de finanzas que se precie debe terminar no con más teoría, sino con acción.",
           "Independientemente de dónde estés hoy en términos patrimoniales, hay pasos concretos que puedes dar para empezar a aplicar la lógica del Juego de la Riqueza en tu vida.",
@@ -1397,7 +1336,7 @@ const BOOK_DATA = [
     "audio": "11_Apendice_II_Glosario_Enciclopedico.mp3",
     "chapters": [
       {
-        "title": "Introducción",
+        "title": "APÉNDICE II: GLOSARIO ENCICLOPÉDICO DEL ARQUITECTO FINANCIERO",
         "content": [
           "1. SARON (Swiss Average Rate Overnight)",
           "Explicación Técnica del Concepto El SARON es el índice de referencia para los préstamos a corto plazo en francos suizos (CHF), sustituyendo al antiguo LIBOR. A diferencia del LIBOR, que se basaba en estimaciones de paneles bancarios sobre dónde creerían que podrían prestar dinero, el SARON es un índice basado en transacciones reales y observadas en el mercado de préstamos interbancarios asegurados por el Banco Nacional Suizo (SNB). Es, técnicamente, el promedio ponderado de las tasas de interés de las transacciones overnight (de un día para otro) en el mercado de repos (repurchase agreements).",
