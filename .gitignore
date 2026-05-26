@@ -24,13 +24,31 @@ __pycache__/
 .gemini/
 .system_generated/
 scratch/
-check_voices.py
-check_eleven.py
-test_eleven_gen.py
-search_logs.py
-search_text.py
-search_pdf.py
-libro codigo 1%/
+*.py
 
-# Keep audio track outputs and book maquetado files
-# (Note: audiolibro/ folder and app_curso/ are included)
+# Ignore book manuscripts and PDF book distribution files
+LIBRO_FINAL_MAQUETADO.*
+LIBRO_FINAL_EPUB.html
+CUBIERTA_COMPLETA_IMPRENTA.pdf
+PORTADA_DIGITAL_KINDLE.png
+Comprar_Pedir_Prestado_Morir.docx
+LIBRO_MAESTRO_V1.docx
+EL-ARTE-DEL-METAL.pdf
+EL-CAPITAL-INVISIBLE*
+EL-CODIGO-ALFA-VIP.pdf
+El-Codigo-Alfa-Dominio-Total-en-20-Misiones.pdf
+LA-PSICOLOGIA-DEL-1percent-QUE-NO-COMPITE-LIDERA.*
+PROTOCOLO 1%*
+balance_statement.pdf
+guia_claude_code_ollama_notebooklm_windows_v3.pdf
+INSTRUCCIONES APP OPAL*
+Black and White Simple Alone Story eBook Cover.pdf
+CODIGO PRUE.pdf
+output.pdf
+
+# Ignore unused resource folders
+ebook/
+imagenes/
+app_curso/
+audiolibro/
+libro\ codigo\ 1%/
